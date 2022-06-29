@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import HelloWorld from '../components/HelloWorld.vue';
+import Navbar from '../components/Navbar.vue';
 </script>
 
 <template>
-  <img alt="Vue logo" src="../assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vuex + Vue Router + TypeScript + Vite" />
+  <div class="flex flex-col">
+    <Navbar />
+    <h1>Test</h1>
+  </div>
 </template>
