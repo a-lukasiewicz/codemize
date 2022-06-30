@@ -29,29 +29,28 @@
               <router-link
                 to="/zaloguj"
                 class="inline-block px-4 py-2 font-bold no-underline hover:text-yellowMain"
-                >Zaloguj się</router-link
+                >Log in</router-link
               >
             </li>
             <li>
               <a
                 class="inline-block px-4 py-2 font-bold no-underline hover:text-yellowMain"
                 href="#pricing"
-                >Cennik</a
+                >Pricing</a
               >
             </li>
             <li>
               <a
                 class="inline-block px-4 py-2 font-bold hover:text-yellowMain"
                 href="#aboutUs"
-                >O nas</a
+                >About Us</a
               >
             </li>
           </ul>
         </div>
       </div>
       <router-link to="/" class="flex items-center pl-4">
-        <h1 class="text-white">Codemize</h1>
-        <!-- <img src="../assets/logo.svg" alt="" /> -->
+        <h1 class="text-white">Codemize.</h1>
       </router-link>
 
       <div
@@ -65,7 +64,7 @@
             <router-link
               to="/kluby"
               class="inline-block px-4 py-2 font-bold hover:text-yellowMain"
-              >Panel użytkownika</router-link
+              >Your workspace</router-link
             >
           </li>
           <li class="mr-3">
