@@ -4,6 +4,7 @@
       <div class="flex flex-col w-full py-6 md:flex-row">
         <div class="flex-1 mb-6 text-black">
           <h1>Codemize.</h1>
+          <p class="pt-4 italic">"We can achieve much more together than you think it's possible"</p>
         </div>
         <div class="flex flex-row justify-between">
           <div class="w-1/2 mx-24">

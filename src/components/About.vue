@@ -22,7 +22,7 @@
       </div>
       <!-- <div class="grid content-center grid-cols-2 lg:grid-cols-3 justify-items-center"> -->
       <div class="flex flex-col justify-between w-full">
-        <AboutUsOption iconURL="../../assets/remotely.svg" linkTitle="Remote learning" class="pt-6 lg:pt-0" />
+        <AboutUsOption iconURL="../../assets/remotely.svg" imagePosition="left" linkTitle="Remote learning" class="pt-6 lg:pt-0" />
         <AboutUsOption iconURL="../../assets/progress.svg" linkTitle="Control your progress" class="pt-6" />
         <!-- <AboutUsOption iconURL="money-jar.svg" linkTitle="Kontrola składek" class="pt-12" />
         <AboutUsOption iconURL="calendar.svg" linkTitle="Kalendarz wydarzeń" class="pt-6 lg:pt-0" />

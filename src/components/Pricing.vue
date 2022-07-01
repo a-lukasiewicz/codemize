@@ -33,11 +33,7 @@
               <span class="text-base">/ per month</span>
             </div>
             <div class="flex items-center justify-center">
-              <button
-                class="px-8 py-4 mx-auto my-6 font-bold text-black transition duration-300 ease-in-out transform rounded-full shadow-lg lg:mx-0 hover:underline gradient focus:outline-none focus:shadow-outline hover:scale-105"
-              >
-                Join Us
-              </button>
+              <Button class="text-black bg-gray-200">Join Us</Button>
             </div>
           </div>
         </div>
@@ -63,11 +59,7 @@
               <span class="text-base">/ per month</span>
             </div>
             <div class="flex items-center justify-center">
-              <button
-                class="px-8 py-4 mx-auto my-6 font-bold text-black transition duration-300 ease-in-out transform rounded-full shadow-lg lg:mx-0 hover:underline gradient focus:outline-none focus:shadow-outline hover:scale-105"
-              >
-                Join Us
-              </button>
+              <Button class="text-black bg-gray-200">Join Us</Button>
             </div>
           </div>
         </div>
@@ -94,11 +86,7 @@
               Invidual pricing
             </div>
             <div class="flex items-center justify-center">
-              <button
-                class="px-8 py-4 mx-auto my-6 font-bold text-black transition duration-300 ease-in-out transform rounded-full shadow-lg lg:mx-0 hover:underline gradient focus:outline-none focus:shadow-outline hover:scale-105"
-              >
-                Contact Us
-              </button>
+              <Button class="text-black bg-gray-200">Contact Us</Button>
             </div>
           </div>
         </div>
@@ -106,4 +94,5 @@
     </div>
   </section>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Button from './Button.vue';</script>
