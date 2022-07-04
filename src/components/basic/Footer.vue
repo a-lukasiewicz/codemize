@@ -6,8 +6,8 @@
           <h1>Codemize.</h1>
           <p class="pt-4 italic">"We can achieve much more together than you think it's possible"</p>
         </div>
-        <div class="flex flex-row justify-between">
-          <div class="w-1/2 mx-24">
+        <div class="flex flex-row justify-between px-8 text-center">
+          <div class="lg:mx-24 lg:w-1/2">
             <p class="text-gray-500 uppercase md:mb-6">Social</p>
           <ul class="mb-6 list-reset">
             <li class="inline-block mt-2 mr-2 md:block md:mr-0">
@@ -21,7 +21,7 @@
             </li>
           </ul>
         </div>
-        <div class="flex-1">
+        <div class="lg:flex-1">
           <p class="text-gray-500 uppercase md:mb-6">Company</p>
           <ul class="mb-6 list-reset">
             <li class="inline-block mt-2 mr-2 md:block md:mr-0">
