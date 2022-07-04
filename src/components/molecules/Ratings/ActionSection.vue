@@ -1,10 +1,7 @@
 <template>
   <section class="py-8 bg-white border-b">
     <div class="container flex flex-wrap pt-4 pb-12 mx-auto">
-      <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Our sponsors & mentors</h1>
-      <div class="w-full mb-4">
-        <div class="divider"></div>
-      </div>
+      <Heading title="Our sponsors & mentors" :divider="true" />
       <div class="flex flex-col flex-grow flex-shrink w-full p-6 md:w-1/3">
         <div class="flex-1 overflow-hidden bg-white rounded-t rounded-b-none shadow">
           <a href="#" class="flex flex-wrap no-underline hover:no-underline">
@@ -51,5 +48,6 @@
   </section>
 </template>
 <script setup lang="ts">
-import Button from './Button.vue';
+import Button from '../../atoms/Button.vue';
+import Heading from '../../atoms/Heading.vue';
 </script>

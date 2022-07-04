@@ -9,10 +9,10 @@
         </router-link>
       </div>
       <div class="w-full py-6 text-center md:w-3/5">
-        <img class="z-50 w-full md:w-4/5" src="../assets/hero.png" />
+        <img class="z-50 w-full md:w-4/5" src="../../../assets/hero.png" />
       </div>
     </div>
   </div>
 </template>
 <script setup lang="ts">
-import Button from './Button.vue';</script>
+import Button from '../../atoms/Button.vue';</script>

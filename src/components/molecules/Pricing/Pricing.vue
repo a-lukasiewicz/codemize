@@ -95,4 +95,4 @@
   </section>
 </template>
 <script setup lang="ts">
-import Button from './Button.vue';</script>
+import Button from '../../atoms/Button.vue';</script>
