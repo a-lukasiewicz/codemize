@@ -7,6 +7,7 @@
     <Companies />
     <!-- <WhyUs /> -->
     <!-- <About /> -->
+    <Numbers />
     <JoinUs />
     <ActionSection />
     <!-- <Pricing /> -->
@@ -24,4 +25,5 @@ import Footer from "../components/Footer.vue";
 import JoinUs from "../components/JoinUs.vue";
 import WhyUs from "../components/WhyUs.vue";
 import Companies from "../components/Companies.vue";
+import Numbers from "../components/Numbers.vue";
 </script>

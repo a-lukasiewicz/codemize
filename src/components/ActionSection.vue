@@ -14,7 +14,7 @@
           </a>
         </div>
         <div class="flex-none p-6 mt-auto overflow-hidden bg-white rounded-t-none rounded-b shadow">
-          <div class="flex items-center justify-start">
+          <div class="flex items-center justify-end">
             <Button class="bg-blue-700">Action</Button>
           </div>
         </div>
@@ -28,7 +28,7 @@
           </a>
         </div>
         <div class="flex-none p-6 mt-auto overflow-hidden bg-white rounded-t-none rounded-b shadow">
-          <div class="flex items-center justify-center">
+          <div class="flex items-center justify-end">
             <Button class="bg-red-400">Action</Button>
           </div>
         </div>

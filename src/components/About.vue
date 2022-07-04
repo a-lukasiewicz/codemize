@@ -16,18 +16,13 @@
   </div>
   <section id="aboutUs" class="py-24 bg-white">
     <div class="flex flex-col">
-      <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Remotely and at any time</h1>
+      <h1 class="w-full my-2 text-3xl font-bold leading-tight text-center text-gray-800 md:text-5xl">Remotely and at any time</h1>
       <div class="w-full mb-4">
         <div class="divider"></div>
       </div>
-      <!-- <div class="grid content-center grid-cols-2 lg:grid-cols-3 justify-items-center"> -->
-      <div class="flex flex-col justify-between w-full">
+      <div class="flex flex-col justify-between px-10 lg:px-40">
         <AboutUsOption iconURL="../../assets/remotely.svg" imagePosition="left" linkTitle="Remote learning" class="pt-6 lg:pt-0" />
         <AboutUsOption iconURL="../../assets/progress.svg" linkTitle="Control your progress" class="pt-6" />
-        <!-- <AboutUsOption iconURL="money-jar.svg" linkTitle="Kontrola składek" class="pt-12" />
-        <AboutUsOption iconURL="calendar.svg" linkTitle="Kalendarz wydarzeń" class="pt-6 lg:pt-0" />
-        <AboutUsOption iconURL="board.svg" linkTitle="Tablica ogłoszeń" class="pt-6" />
-        <AboutUsOption iconURL="roles.svg" linkTitle="Przypisywanie ról" class="pt-6" /> -->
       </div>
     </div>
   </section>
