@@ -17,8 +17,8 @@
     <div class="flex flex-col">
       <Heading title="Remotely and at any time" :divider="true" />
       <div class="flex flex-col justify-between px-10 lg:px-40">
-        <AboutUsOption iconURL="../../assets/remotely.svg" imagePosition="left" linkTitle="Remote learning" class="pt-6 lg:pt-0" />
-        <AboutUsOption iconURL="../../assets/progress.svg" linkTitle="Control your progress" class="pt-6" />
+        <AboutUsOption iconURL="remotely.svg" imagePosition="left" linkTitle="Remote learning" class="pt-6 lg:pt-0" />
+        <AboutUsOption iconURL="progress.svg" linkTitle="Control your progress" class="pt-6" />
       </div>
     </div>
   </section>
