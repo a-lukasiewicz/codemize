@@ -1,5 +1,5 @@
 <template>
-    <section id="whyUs" class="pt-24 pb-20 bg-blue-300">
+    <section id="whyUs" class="pt-24 pb-20 bg-main-4">
     <div class="flex flex-col px-5">
       <Heading title="Our stats" subTitle="Many successfull carreers starts here" />
       <div class="flex justify-around px-4 md:px-24 py-12 mb-4 lg:px-[25vw]">

@@ -1,4 +1,3 @@
-/* eslint-disable vue/attribute-hyphenation */
 <template>
   <div class="relative -mt-12 lg:-mt-24">
     <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -14,7 +13,7 @@
       </g>
     </svg>
   </div>
-  <section id="aboutUs" class="py-24 bg-white">
+  <section id="aboutUs" class="py-24 bg-main-5">
     <div class="flex flex-col">
       <Heading title="Remotely and at any time" :divider="true" />
       <div class="flex flex-col justify-between px-10 lg:px-40">
