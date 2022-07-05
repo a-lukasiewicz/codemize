@@ -3,7 +3,7 @@
     <div class="container px-8 mx-auto">
       <div class="flex flex-col w-full py-6 md:flex-row">
         <div class="flex-1 mb-6 text-black">
-          <h1>Codemize.</h1>
+          <Logo />
           <p class="pt-4 italic">"We can achieve much more together than you think it's possible"</p>
         </div>
         <div class="flex flex-row justify-between px-8 text-center">
@@ -43,4 +43,6 @@
     </div>
   </footer>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Logo from "../atoms/Logo.vue"
+</script>

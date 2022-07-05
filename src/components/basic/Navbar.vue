@@ -50,7 +50,7 @@
         </div>
       </div>
       <router-link to="/" class="flex items-center pl-4">
-        <h1 class="text-white">Codemize.</h1>
+        <Logo white />
       </router-link>
 
       <div
@@ -103,6 +103,7 @@
 </template>
 <script setup lang="ts">
 import {ref} from "vue";
+import Logo from "../atoms/Logo.vue"
 
 const showMenu = ref(false);
 const isUserLogged = ref(false);
