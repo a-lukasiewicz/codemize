@@ -1,5 +1,5 @@
 <template>
-  <nav id="header" class="fixed top-0 z-30 w-full text-white bg-blue-300">
+  <nav id="header" class="fixed top-0 z-30 w-full text-main-5 bg-main-2">
     <div
       class="container flex flex-wrap items-center w-full py-2 mx-auto mt-0 lg:justify-between"
     >
@@ -50,7 +50,7 @@
         </div>
       </div>
       <router-link to="/" class="flex items-center pl-4">
-        <h1 class="text-white">Codemize.</h1>
+        <Logo white />
       </router-link>
 
       <div
@@ -103,6 +103,7 @@
 </template>
 <script setup lang="ts">
 import {ref} from "vue";
+import Logo from "../atoms/Logo.vue"
 
 const showMenu = ref(false);
 const isUserLogged = ref(false);

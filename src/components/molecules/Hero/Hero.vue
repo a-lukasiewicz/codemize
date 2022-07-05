@@ -5,7 +5,7 @@
         <h1 class="my-4 text-5xl font-bold leading-tight text-center lg:text-left">Master your skills easiest way possible.</h1>
         <p class="mb-8 text-2xl leading-normal">Codemize is for you all that want to start your carrer in IT. It's platform that gives oppurtunity to learn most important concepts to be job ready.</p>
         <router-link to="/zarejestruj">
-        <Button class="bg-blue-500">Join us!</Button>
+        <Button class="text-white bg-main-1">Join us!</Button>
         </router-link>
       </div>
       <div class="w-full py-6 text-center md:w-3/5">

@@ -1,9 +1,9 @@
 <template>
-  <footer class="bg-white">
+  <footer class="bg-main-5">
     <div class="container px-8 mx-auto">
       <div class="flex flex-col w-full py-6 md:flex-row">
         <div class="flex-1 mb-6 text-black">
-          <h1>Codemize.</h1>
+          <Logo />
           <p class="pt-4 italic">"We can achieve much more together than you think it's possible"</p>
         </div>
         <div class="flex flex-row justify-between px-8 text-center">
@@ -11,13 +11,13 @@
             <p class="text-gray-500 uppercase md:mb-6">Social</p>
           <ul class="mb-6 list-reset">
             <li class="inline-block mt-2 mr-2 md:block md:mr-0">
-              <a href="#" class="text-gray-800 no-underline hover:underline hover:text-pink-500">Facebook</a>
+              <a href="#" class="text-gray-800 no-underline hover:underline hover:text-main-1">Facebook</a>
             </li>
             <li class="inline-block mt-2 mr-2 md:block md:mr-0">
-              <a href="#" class="text-gray-800 no-underline hover:underline hover:text-pink-500">Blog</a>
+              <a href="#" class="text-gray-800 no-underline hover:underline hover:text-main-1">Blog</a>
             </li>
             <li class="inline-block mt-2 mr-2 md:block md:mr-0">
-              <a href="#" class="text-gray-800 no-underline hover:underline hover:text-pink-500">Linkedin</a>
+              <a href="#" class="text-gray-800 no-underline hover:underline hover:text-main-1">Linkedin</a>
             </li>
           </ul>
         </div>
@@ -25,16 +25,16 @@
           <p class="text-gray-500 uppercase md:mb-6">Company</p>
           <ul class="mb-6 list-reset">
             <li class="inline-block mt-2 mr-2 md:block md:mr-0">
-              <a href="#" class="text-gray-800 no-underline hover:underline hover:text-pink-500">Support</a>
+              <a href="#" class="text-gray-800 no-underline hover:underline hover:text-main-1">Support</a>
             </li>
             <li class="inline-block mt-2 mr-2 md:block md:mr-0">
-              <a href="#" class="text-gray-800 no-underline hover:underline hover:text-pink-500">Contact</a>
+              <a href="#" class="text-gray-800 no-underline hover:underline hover:text-main-1">Contact</a>
             </li>
             <li class="inline-block mt-2 mr-2 md:block md:mr-0">
-              <a href="#" class="text-gray-800 no-underline hover:underline hover:text-pink-500">Terms</a>
+              <a href="#" class="text-gray-800 no-underline hover:underline hover:text-main-1">Terms</a>
             </li>
             <li class="inline-block mt-2 mr-2 md:block md:mr-0">
-              <a href="#" class="text-gray-800 no-underline hover:underline hover:text-pink-500">About Us</a>
+              <a href="#" class="text-gray-800 no-underline hover:underline hover:text-main-1">About Us</a>
             </li>
           </ul>
         </div>
@@ -43,4 +43,6 @@
     </div>
   </footer>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Logo from "../atoms/Logo.vue"
+</script>

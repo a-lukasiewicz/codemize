@@ -3,9 +3,9 @@
     <Navbar />
     <Hero />
     <About />
-    <WhyUs />
+    <WhyUs experience />
     <Companies />
-    <Numbers />
+    <WhyUs />
     <JoinUs />
     <ActionSection />
     <!-- <Pricing /> -->
@@ -23,5 +23,4 @@ import Footer from "../components/basic/Footer.vue";
 import JoinUs from "../components/atoms/JoinUs.vue";
 import WhyUs from "../components/molecules/WhyUs/WhyUs.vue";
 import Companies from "../components/molecules/Companies/Companies.vue";
-import Numbers from "../components/molecules/WhyUs/Numbers.vue";
 </script>

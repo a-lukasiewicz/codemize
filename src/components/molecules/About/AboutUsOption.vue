@@ -17,5 +17,5 @@ const props = defineProps({
   imagePosition: {type: String, default: ""},
 });
 
-const imageURL = new URL(`/src/assets/about-us/${props.iconURL}`, import.meta.url).href;
+const imageURL = new URL(`/src/assets/${props.iconURL}`, import.meta.url).href;
 </script>
