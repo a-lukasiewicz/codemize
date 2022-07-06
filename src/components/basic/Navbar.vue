@@ -27,7 +27,7 @@
           >
             <li>
               <router-link
-                to="/zaloguj"
+                to="/login"
                 class="inline-block px-4 py-2 font-bold no-underline hover:text-yellowMain"
                 >Log in</router-link
               >
