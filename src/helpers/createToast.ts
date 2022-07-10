@@ -13,8 +13,8 @@ export const createToastFunction = (
     },
     {
       hideProgressBar: true,
-      type: type,
       transition: 'bounce',
+      type: type,
       position: 'bottom-center',
       showCloseButton: false,
       showIcon: true,
