@@ -14,7 +14,7 @@
           platform that gives oppurtunity to learn most important concepts to be
           job ready.
         </p>
-        <router-link to="/signup">
+        <router-link to="/sign-up">
           <Button class="text-white bg-main-1">Join us!</Button>
         </router-link>
       </div>
