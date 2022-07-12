@@ -6,7 +6,11 @@ import About from './views/nonAuthorized/About.vue';
 import LoginPage from './views/nonAuthorized/LoginPage.vue';
 import ForgotPasswordPage from './views/nonAuthorized/ForgotPasswordPage.vue';
 import Signup from './views/nonAuthorized/Signup.vue';
-import StartPanel from './views/authorized/StartPanel.vue';
+import AuthHome from './views/Authorized/AuthHome.vue';
+import Paths from './views/Authorized/Paths.vue';
+import NewCourses from './views/Authorized/NewCourses.vue';
+import Share from './views/Authorized/Share.vue';
+import Profile from './views/Authorized/Profile.vue';
 
 export const routes: RouteRecordRaw[] = [
   {
@@ -30,8 +34,24 @@ export const routes: RouteRecordRaw[] = [
     component: Signup,
   },
   {
-    path: '/start-panel',
-    component: StartPanel,
+    path: '/home',
+    component: AuthHome,
+  },
+  {
+    path: '/your-paths',
+    component: Paths,
+  },
+  {
+    path: '/new-courses',
+    component: NewCourses,
+  },
+  {
+    path: '/share',
+    component: Share,
+  },
+  {
+    path: '/profile',
+    component: Profile,
   },
 ];
 

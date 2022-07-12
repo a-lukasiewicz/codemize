@@ -7,12 +7,12 @@
     </div>
     <div v-if="loggedIn" class="w-full py-12">
       <div class="flex flex-row justify-between w-full lg:flex-col">
-        <SidebarLink route="/kluby" iconURL="home.svg" linkTitle="Stowarzyszenia" />
-        <SidebarLink route="/kalendarz" iconURL="chart-histogram.svg" linkTitle="Kalendarz" />
-        <SidebarLink route="/powiadomienia" iconURL="alarm-clock.svg" linkTitle="Powiadomienia" />
-        <SidebarLink route="/platnosci" iconURL="share.svg" linkTitle="Płatności" />
-        <SidebarLink route="/ustawienia" iconURL="settings-sliders.svg" linkTitle="Ustawienia" />
-        <SidebarLink route="/" iconURL="signout.svg" linkTitle="Wyloguj się" @click="logout" />
+        <SidebarLink route="/home" iconURL="home.svg" linkTitle="Home" />
+        <SidebarLink route="/your-paths" iconURL="chart-histogram.svg" linkTitle="Your paths" />
+        <SidebarLink route="/new-courses" iconURL="alarm-clock.svg" linkTitle="New courses" />
+        <SidebarLink route="/share" iconURL="share.svg" linkTitle="Share" />
+        <SidebarLink route="/profile" iconURL="settings-sliders.svg" linkTitle="Your profile" />
+        <SidebarLink route="/" iconURL="signout.svg" linkTitle="Log out" @click="logout" />
       </div>
       <hr class="hidden my-4 lg:block lg:my-8" />
     </div>
