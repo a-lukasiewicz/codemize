@@ -27,7 +27,7 @@
           >
             <li>
               <router-link
-                to="/zaloguj"
+                to="/login"
                 class="inline-block px-4 py-2 font-bold no-underline hover:text-yellowMain"
                 >Log in</router-link
               >
@@ -62,7 +62,7 @@
         <ul class="items-center justify-end flex-1 list-reset lg:flex">
           <li v-if="isUserLogged" class="mr-3">
             <router-link
-              to="/kluby"
+              to="/start-panel"
               class="inline-block px-4 py-2 font-bold hover:text-yellowMain"
               >Your workspace</router-link
             >
@@ -102,8 +102,8 @@
   </nav>
 </template>
 <script setup lang="ts">
-import {ref} from "vue";
-import Logo from "../atoms/Logo.vue"
+import { ref } from 'vue';
+import Logo from '../atoms/Logo.vue';
 
 const showMenu = ref(false);
 const isUserLogged = ref(false);
