@@ -46,7 +46,7 @@ export const routes: RouteRecordRaw[] = [
     component: NewCourses,
   },
   {
-    path: '/share',
+    path: '/our-team',
     component: Share,
   },
   {

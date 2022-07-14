@@ -27,7 +27,11 @@
           iconURL="alarm-clock.svg"
           linkTitle="New courses"
         />
-        <SidebarLink route="/share" iconURL="share.svg" linkTitle="Share" />
+        <SidebarLink
+          route="/our-team"
+          iconURL="share.svg"
+          linkTitle="Our team"
+        />
         <SidebarLink
           route="/profile"
           iconURL="settings-sliders.svg"
