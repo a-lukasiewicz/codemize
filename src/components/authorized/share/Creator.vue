@@ -20,7 +20,7 @@
       </div>
       <div class="pt-6 text-center">
         <p class="mb-1 text-lg font-bold leading-normal">{{ name }}</p>
-        <p class="font-light leading-relaxed text-gray-500">{{ role }}</p>
+        <p class="leading-relaxed text-gray-500">{{ role }}</p>
         <div class="mt-2 mb-5 space-x-2">
           <a class="hover:text-blue-700" aria-label="Twitter link" href="#">
             <svg

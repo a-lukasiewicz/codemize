@@ -7,8 +7,9 @@
         <div class="flex justify-center w-full">
           <div class="relative">
             <img
-              src="https://github.com/creativetimofficial/soft-ui-dashboard-tailwind/blob/main/build/assets/img/team-2.jpg?raw=true"
+              src="@assets/defaultAvatar.png"
               class="shadow-xl rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"
+              alt="User Avatar"
             />
           </div>
         </div>

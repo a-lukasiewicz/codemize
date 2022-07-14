@@ -1,13 +1,13 @@
 <template>
   <div
-    class="lg:hidden top-0 text-center justify-center lg:left-0 fixed z-10 flex flex-row lg:flex-col w-screen lg:w-[17vw] px-10 items-center h-[15vh] lg:min-h-screen text-white bg-main-1"
+    class="lg:hidden top-0 text-center justify-center lg:left-0 fixed z-10 flex flex-row lg:flex-col w-screen lg:w-[17vw] px-10 items-center h-[8vh] lg:min-h-screen text-white bg-main-1"
   >
     <router-link to="/home">
       <Logo white />
     </router-link>
   </div>
   <div
-    class="bottom-0 lg:left-0 fixed z-10 flex flex-row lg:flex-col w-screen lg:w-[17vw] px-10 items-center h-[15vh] lg:min-h-screen text-white bg-main-1"
+    class="bottom-0 lg:left-0 fixed z-10 flex flex-row lg:flex-col w-screen lg:w-[17vw] px-10 items-center h-[8vh] lg:min-h-screen text-white bg-main-1"
   >
     <div class="hidden pt-12 ml-2 lg:block lg:ml-5">
       <router-link to="/home">
@@ -22,11 +22,11 @@
           iconURL="chart-histogram.svg"
           linkTitle="Your paths"
         />
-        <SidebarLink
+        <!-- <SidebarLink
           route="/new-courses"
           iconURL="alarm-clock.svg"
           linkTitle="New courses"
-        />
+        /> -->
         <SidebarLink
           route="/our-team"
           iconURL="share.svg"

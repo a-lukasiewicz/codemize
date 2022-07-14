@@ -6,14 +6,14 @@
         <Creator name="Sarah Deava" role="Marketing" />
         <Creator name="Sarah Deava" role="Sales Manager" />
       </div>
-      <h3 class="py-4 text-2xl font-bold">Frontend Path Creators</h3>
+      <h3 class="py-8 text-2xl font-bold">Frontend Path Creators</h3>
       <div class="flex flex-row flex-wrap justify-center -mx-4">
         <Creator name="Joe Antonio" role="Team Leader" />
         <Creator name="Sarah Deava" />
         <Creator name="Sarah Deava" />
         <Creator name="Sarah Deava" />
       </div>
-      <h3 class="py-4 text-2xl font-bold">Backend Path Creators</h3>
+      <h3 class="py-8 text-2xl font-bold">Backend Path Creators</h3>
       <div class="flex flex-row flex-wrap justify-center -mx-4">
         <Creator name="Joe Antonio" role="Team Leader" />
         <Creator name="Sarah Deava" />
