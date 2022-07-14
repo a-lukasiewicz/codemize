@@ -1,0 +1,37 @@
+<template>
+  <div
+    :class="{ 'opacity-50': disabled }"
+    class="relative w-full max-w-md min-w-0 mx-auto mb-6 break-words bg-white shadow-lg xl:max-w-2xl rounded-xl"
+  >
+    <div class="card">
+      <div class="card-header">
+        <a href="https://www.material-tailwind.com" blur-shadow-image="true">
+          <img
+            class="w-auto"
+            src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+            alt="tailwind-card-image"
+          />
+        </a>
+      </div>
+      <div class="card-body">
+        <h4 class="font-semibold">{{ pathName }}</h4>
+        <p class="mb-4 opcacity-60">{{ pathDescription }}</p>
+        <div class="flex justify-end">
+          <Button :disabled="disabled" class="text-right text-white bg-main-1"
+            >Join path</Button
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import Button from '@/components/atoms/Button.vue';
+
+defineProps({
+  pathName: { type: String, default: '' },
+  pathDescription: { type: String, default: '' },
+  disabled: { type: Boolean, default: false },
+});
+</script>
