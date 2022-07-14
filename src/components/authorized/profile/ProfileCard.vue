@@ -26,7 +26,7 @@
       <div class="py-6 mt-6 text-center border-t border-slate-200">
         <div class="flex flex-wrap justify-center">
           <div class="w-full px-4">
-            <p class="mb-4 font-light leading-relaxed text-slate-600">
+            <p class="mb-4 leading-relaxed text-slate-600">
               An artist of considerable range, Mike is the name taken by
               Melbourne-raised, Brooklyn-based Nick Murphy writes, performs and
               records all of his own music, giving it a warm.
@@ -56,7 +56,6 @@
 </template>
 
 <script setup lang="ts">
-import RatingBox from '@/components/molecules/Ratings/RatingBox.vue';
 import Button from '@/components/atoms/Button.vue';
 import ProfileBoxCard from './ProfileBoxCard.vue';
 </script>

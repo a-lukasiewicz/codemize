@@ -17,9 +17,11 @@
         <h4 class="font-semibold">{{ pathName }}</h4>
         <p class="mb-4 opcacity-60">{{ pathDescription }}</p>
         <div class="flex justify-end">
-          <Button :disabled="disabled" class="text-right text-white bg-main-1"
-            >Join path</Button
-          >
+          <router-link to="/frontend-path">
+            <Button :disabled="disabled" class="text-right text-white bg-main-1"
+              >Join path</Button
+            >
+          </router-link>
         </div>
       </div>
     </div>

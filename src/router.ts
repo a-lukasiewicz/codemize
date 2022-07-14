@@ -11,6 +11,7 @@ import Paths from './views/Authorized/Paths.vue';
 import NewCourses from './views/Authorized/NewCourses.vue';
 import Share from './views/Authorized/Share.vue';
 import Profile from './views/Authorized/Profile.vue';
+import Main from './views/Authorized/FrontEnd/Main.vue';
 
 export const routes: RouteRecordRaw[] = [
   {
@@ -52,6 +53,10 @@ export const routes: RouteRecordRaw[] = [
   {
     path: '/profile',
     component: Profile,
+  },
+  {
+    path: '/frontend-path',
+    component: Main,
   },
 ];
 
