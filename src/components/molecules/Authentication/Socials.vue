@@ -78,7 +78,7 @@ const login = (e: Event) => {
   e.preventDefault();
   signInWithEmailAndPassword(auth, props.email, props.password)
     .then(() => {
-      router.push('/start-panel');
+      router.push('/home');
     })
     .catch((error) => {
       createToastFunction(
@@ -93,7 +93,7 @@ const signup = (e: Event) => {
   e.preventDefault();
   createUserWithEmailAndPassword(auth, props.email, props.password)
     .then(() => {
-      router.push('/start-panel');
+      router.push('/home');
       createToastFunction(
         'Account successfully created',
         'success',
@@ -108,7 +108,7 @@ const signup = (e: Event) => {
 const FacebookLogin = () => {
   signInWithPopup(auth, providerFacebook)
     .then(() => {
-      router.push('/start-panel');
+      router.push('/home');
     })
     .catch((error) => {
       createToastFunction(
@@ -122,7 +122,7 @@ const FacebookLogin = () => {
 const GoogleLogin = () => {
   signInWithPopup(auth, providerGoogle)
     .then(() => {
-      router.push('/start-panel');
+      router.push('/home');
     })
     .catch((error) => {
       createToastFunction(
@@ -136,7 +136,7 @@ const GoogleLogin = () => {
 const GithubLogin = () => {
   signInWithPopup(auth, providerGithub)
     .then(() => {
-      router.push('/start-panel');
+      router.push('/home');
     })
     .catch((error) => {
       createToastFunction(
