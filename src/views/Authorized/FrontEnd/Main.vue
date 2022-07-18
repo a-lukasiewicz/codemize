@@ -21,20 +21,26 @@
         <li class="step">Typescript</li>
       </ul>
     </div>
-    <div class="grid grid-cols-1 gap-4">
+    <div class="grid grid-cols-1 gap-4 place-items-center">
       <Technology :value="74" buttonText="Continue Learning" techName="HTML5" />
-      <Technology :value="32" buttonText="Continue Learning" techName="CSS3" />
-      <Technology
-        :value="11"
-        buttonText="Continue Learning"
-        techName="JavaScript"
-      />
     </div>
     <h3></h3>
     <h3 class="mt-6 mb-6 text-2xl font-semibold">
       Finish previous courses to unlock that technologies:
     </h3>
-    <div class="grid grid-cols-1 gap-4">
+    <div class="grid grid-cols-1 gap-4 place-items-center">
+      <Technology
+        :value="0"
+        disabled
+        buttonText="Start Learning"
+        techName="CSS3"
+      />
+      <Technology
+        :value="0"
+        disabled
+        buttonText="Start Learning"
+        techName="JavaScript"
+      />
       <Technology
         :value="0"
         buttonText="Start Learning"

@@ -6,10 +6,12 @@
         <Flashcard :frontText="card.frontText" :backText="card.backText" />
       </div>
     </div>
+    <Button @click="$router.go(-1)">Go back</Button>
   </AuthorizedTemplate>
 </template>
 <script setup lang="ts">
 import AuthorizedTemplate from '@views/Authorized/AuthorizedTemplate.vue';
 import Flashcard from '@/components/authorized/course/Flashcard.vue';
+import Button from '@/components/atoms/Button.vue';
 import cards from '@/data/HTML/flashcards.json';
 </script>

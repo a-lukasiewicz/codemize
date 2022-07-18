@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex items-center justify-end w-full py-8 pr-5 rounded-md bg-main-4"
+    class="flex items-center justify-end w-full py-8 pr-5 rounded-md lg:w-3/5 bg-main-4"
   >
     <h1 class="text-2xl font-bold">{{ techName }}</h1>
     <div class="flex items-center ml-6">
@@ -10,7 +10,7 @@
         max="100"
       ></progress>
       <p class="mx-8 text-xl">{{ value }} / 100</p>
-      <router-link to="/html5">
+      <router-link to="html5">
         <Button
           :disabled="disabled"
           :class="{ 'opacity-10': disabled }"

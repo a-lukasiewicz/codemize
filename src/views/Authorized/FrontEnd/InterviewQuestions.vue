@@ -17,11 +17,12 @@
         </ul>
       </div>
     </div>
+    <Button @click="$router.go(-1)">Go back</Button>
   </AuthorizedTemplate>
 </template>
 <script setup lang="ts">
 import AuthorizedTemplate from '@views/Authorized/AuthorizedTemplate.vue';
 import data from '@/data/HTML/interview_questions.json';
-// import data from ""
 import Interview_Li from './Interview_Li.vue';
+import Button from '@/components/atoms/Button.vue';
 </script>

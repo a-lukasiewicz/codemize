@@ -3,13 +3,13 @@
     <h3 class="mt-6 mb-6 text-2xl font-semibold">HTML5</h3>
 
     <h3 class="my-6 text-2xl font-semibold">About this course:</h3>
-    <p class="mb-6 text-center">
+    <p class="mb-6 tracking-wider text-center">
       Learn the basics of HTML5 and start building webpages!
     </p>
 
     <p>In this course we will provide:</p>
     <ul class="list-disc list-inside">
-      <li><span class="font-semibold">12 lessons</span></li>
+      <li><span class="font-semibold">4 lessons</span></li>
       <li>
         <span class="font-semibold">Flashcards</span> with that you should know
         after completing lessons
