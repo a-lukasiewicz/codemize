@@ -14,6 +14,8 @@ import Profile from './views/Authorized/Profile.vue';
 import Main from './views/Authorized/FrontEnd/Main.vue';
 import Tech_HTML5 from './views/Authorized/FrontEnd/Tech_HTML5.vue';
 import InterviewQuestions from './views/Authorized/FrontEnd/InterviewQuestions.vue';
+import Lesson from './views/Authorized/FrontEnd/Lesson.vue';
+import AllFlashcards from './views/Authorized/FrontEnd/AllFlashcards.vue';
 
 export const routes: RouteRecordRaw[] = [
   {
@@ -67,6 +69,26 @@ export const routes: RouteRecordRaw[] = [
   {
     path: '/interview-questions',
     component: InterviewQuestions,
+  },
+  {
+    path: '/basics',
+    component: Lesson,
+  },
+  {
+    path: '/tables',
+    component: Lesson,
+  },
+  {
+    path: '/forms',
+    component: Lesson,
+  },
+  {
+    path: '/semantic-elements',
+    component: Lesson,
+  },
+  {
+    path: '/all-flashcards',
+    component: AllFlashcards,
   },
 ];
 
