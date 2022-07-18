@@ -1,0 +1,40 @@
+[
+    {
+       "introduction":[
+          "What is a form?",
+          "Form element represents a document section containing interactive controls for submitting information.",
+          "FORM EXAMPLE"
+       ],
+       "practical-knowledge":[
+          "Build your first form",
+          "https://youtu.be/2O8pkybH6po"
+       ],
+       "most-important-tags":[
+          {
+             "input":"element is used to create an HTML form for user input"
+          },
+          {
+             "textarea":"tag defines a multi-line text input control"
+          },
+          {
+             "button":"tag defines a clickable button"
+          },
+          {
+             "select":"element is used to create a drop-down list"
+          },
+          {
+             "option":"tag defines an option in a select list"
+          },
+          {
+             "label":"tag defines a label for several elements: input, select, textarea"
+          }
+       ],
+       "advices":[
+          "Forms could look complicated for begginer, try to go through this lesson one more time tomorrow"
+       ],
+       "recap":[
+          "CODE OF A SAMPLE FORM",
+          "TRY TO BUILD THIS WEBSITE ON YOUR OWN AND LINK/IMAGE PROVIDED"
+       ]
+    }
+ ]

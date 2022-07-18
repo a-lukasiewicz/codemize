@@ -51,7 +51,12 @@
         />
       </div>
     </div>
-    <Button @click="$router.go(-1)">Go back</Button>
+    <div>
+      <Button @click="$router.go(-1)">Go back</Button>
+      <Button class="ml-2 text-white bg-green-400" @click="$router.go(-1)"
+        >Mark lesson as completed</Button
+      >
+    </div>
   </AuthorizedTemplate>
 </template>
 <script setup lang="ts">
