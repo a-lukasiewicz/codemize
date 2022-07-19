@@ -1,35 +1,32 @@
-[
-    {
-       "introduction":[
-          "What is a table?",
-          "A table is a structured set of data made up of rows and columns (tabular data). A table allows you to quickly and easily look up values that indicate some kind of connection between different types of data, for example a person and their age, or a day of the week, or the timetable for a local swimming pool.",
-          "TABLE EXAMPLE",
-          "The point of a table is that it is rigid. Information is easily interpreted by making visual associations between row and column headers."
-       ],
-       "practical-knowledge":[
-          "Build your first table",
-          "https://youtu.be/iDA0kF5lrVk"
-       ],
-       "most-important-tags":[
-          {
-             "table":"tag defines an HTML table"
-          },
-          {
-             "tr":"element defines a table row"
-          },
-          {
-             "th":"element defines a table header"
-          },
-          {
-             "td":"element defines a table cell"
-          }
-       ],
-       "advices":[
-          "Don't forget that every tag above should save it's enclosing tag. Without that your table will break"
-       ],
-       "recap":[
-          "CODE OF A SAMPLE TABLE",
-          "TRY TO BUILD THIS WEBSITE ON YOUR OWN AND LINK/IMAGE PROVIDED"
-       ]
-    }
- ]
+{
+   "introduction":[
+      "What is a table?",
+      "A table is a structured set of data made up of rows and columns (tabular data). A table allows you to quickly and easily look up values that indicate some kind of connection between different types of data, for example a person and their age, or a day of the week, or the timetable for a local swimming pool.",
+      "The point of a table is that it is rigid. Information is easily interpreted by making visual associations between row and column headers. Example table:"
+   ],
+   "practicalKnowledge":[
+      "Build your first table",
+      "https://www.youtube.com/embed/iDA0kF5lrVk"
+   ],
+   "mostImportantTags":[
+      {
+         "<table>":"tag defines an HTML table"
+      },
+      {
+         "<tr>":"element defines a table row"
+      },
+      {
+         "<th>":"element defines a table header"
+      },
+      {
+         "<td>":"element defines a table cell"
+      }
+   ],
+   "advices":[
+      "Don't forget that every tag above should save it's enclosing tag. Without that your table will break."
+   ],
+   "recap":[
+      "Try to recreate table from Most Important Tags. For now don't worry about styles. If you need help check link below",
+      "https://www.w3schools.com/html/html_tables.asp"
+   ]
+}

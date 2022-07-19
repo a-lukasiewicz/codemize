@@ -1,5 +1,5 @@
 <template>
-  <div class="m-4">
+  <div class="my-4">
     <div
       class="px-4 py-8 text-white card bg-main-2"
       @click="flipped = !flipped"

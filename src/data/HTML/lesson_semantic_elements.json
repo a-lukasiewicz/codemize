@@ -1,48 +1,45 @@
-[
-    {
-       "introduction":[
-          "What are Semantic elements?",
-          "A semantic element clearly describes its meaning to both the browser and the developer.",
-          "Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.",
-          "Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.",
-          "EXAMPLE"
-       ],
-       "practical-knowledge":[
-          "Build your first form",
-          "https://youtu.be/2O8pkybH6po"
-       ],
-       "most-important-tags":[
-          {
-             "header":"element represents a container for introductory content or a set of navigational links"
-          },
-          {
-             "nav":"element defines a set of navigation links"
-          },
-          {
-             "section":"element defines a section in a document"
-          },
-          {
-             "article":"element specifies independent, self-contained content. An article should make sense on its own, and it should be possible to distribute it independently from the rest of the web site."
-          },
-          {
-             "aside":"element defines some content aside from the content it is placed in (like a sidebar)"
-          },
-          {
-             "footer":"element defines a footer for a document or section"
-          }
-       ],
-       "advices":[
-          "Notice that NOT all links of a document should be inside a <nav> element. The <nav> element is intended only for major block of navigation links. Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content.",
-          "Use Lowercase Element Names",
-          "Close All HTML Elements",
-          "Use Lowercase Attribute Names",
-          "Always Quote Attribute Values",
-          "Avoid Long Code Lines",
-          "Use formatter for your HTML"
-       ],
-       "recap":[
-          "CODE OF A SAMPLE WEBSITE WITH SEMANTHIC ELEMENTS",
-          "TRY TO BUILD THIS WEBSITE ON YOUR OWN AND LINK/IMAGE PROVIDED"
-       ]
-    }
- ]
+{
+   "introduction":[
+      "What are Semantic elements?",
+      "A semantic element clearly describes its meaning to both the browser and the developer.",
+      "Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.",
+      "Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content."
+   ],
+   "practicalKnowledge":[
+      "Use for the first time semantic elements",
+      "https://www.youtube.com/embed/kGW8Al_cga4"
+   ],
+   "mostImportantTags":[
+      {
+         "<header>":"element represents a container for introductory content or a set of navigational links"
+      },
+      {
+         "<nav>":"element defines a set of navigation links"
+      },
+      {
+         "<section>":"element defines a section in a document"
+      },
+      {
+         "<article>":"element specifies independent, self-contained content. An article should make sense on its own, and it should be possible to distribute it independently from the rest of the web site."
+      },
+      {
+         "<aside>":"element defines some content aside from the content it is placed in (like a sidebar)"
+      },
+      {
+         "<footer>":"element defines a footer for a document or section"
+      }
+   ],
+   "advices":[
+      "Notice that NOT all links of a document should be inside a <nav> element. The <nav> element is intended only for major block of navigation links. Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content.",
+      "Use Lowercase Element Names",
+      "Close All HTML Elements",
+      "Use Lowercase Attribute Names",
+      "Always Quote Attribute Values",
+      "Avoid Long Code Lines",
+      "Use formatter for your HTML"
+   ],
+   "recap":[
+      "Try to recreate this layout from beggining of that lesson. Feel free to add your own content.",
+      "https://www.w3schools.com/html/html5_semantic_elements.asp"
+   ]
+}
