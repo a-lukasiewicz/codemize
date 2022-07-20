@@ -1,0 +1,58 @@
+{
+   "introduction":[
+      "Welcome to the world of code! Last year, millions of learners from our community started with HTML. Why? HTML is the skeleton of all web pages.",
+      "It’s often the first language learned by developers, marketers, and designers and is core to front-end development work. So what exactly is HTML? HTML provides structure to the content appearing on a website, such as images, text, or videos.",
+      "So what is the difference between HTML, CSS, and JavaScript? First of all, they can all be encapsulated within an HTML page, meaning that the browser starts by loading an HTML page, and only then it knows what to load from there.",
+      "An HTML page is an HTML document that defines the content of the page by using a special markup similar to XML.A CSS stylesheet defines the style of the HTML elements in the page. JavaScript is the programming language used to interact with the HTML page through an API called the DOM (Document Object Model) Bindings.",
+      "In other words, the DOM Bindings are the glue between the programming language and the HTML page that was initially loaded into the browser."
+   ],
+   "practicalKnowledge":[
+      "How to open your first project?",
+      "https://www.youtube.com/embed/bupWPZdXqIA"
+   ],
+   "mostImportantTags":[
+      {
+         "<html>":"It is the root of the HTML document which is used to specify that the document is HTML."
+      },
+      {
+         "<head>":"The head tag is used to contain all the head elements in the HTML file. It contains the title, style, meta, … etc tag."
+      },
+      {
+         "<body>":"It is used to define the body of an HTML document. It contains images, tables, lists, … etc."
+      },
+      {
+         "heading":"It is used to define the heading of an HTML document."
+      },
+      {
+         "paragraph":"It is used to define paragraph content in an HTML document."
+      },
+      {
+         "anchor tag":" It is used to link one page to another page."
+      },
+      {
+         "unordered list":"It is used to list the content without order."
+      },
+      {
+         "ordered list":" It is used to list the content in a particular order."
+      },
+      {
+         "list item":"It is used to list the content."
+      },
+      {
+         "image":"It is used to add image elements in HTML documents."
+      }
+   ],
+   "advices":[
+      "Don't spend a lot of time searching for best tools to learn, the basic ones are the best for now.",
+      "Remember to slowly read and fully understand what's included in lessons, there's no need to hurry.",
+      "It's not bad that you don't know everything after time it will be a lot easier"
+   ],
+   "recap":[
+      "Try to recreate this website using only HTML, look into documentation, feel free to create your own website.",
+      "http://info.cern.ch/hypertext/WWW/TheProject.html"
+   ],
+   "usefulLinks": [
+      "https://www.w3schools.com/html/",
+      "https://developer.mozilla.org/pl/docs/Web/HTML"
+   ]
+}

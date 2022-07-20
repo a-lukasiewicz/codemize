@@ -1,29 +1,29 @@
 <template>
-  <div
-    class="relative w-full max-w-md min-w-0 mx-auto mt-16 mb-6 break-words md:max-w-2xl"
-  >
-    <div class="px-6">
-      <div class="flex flex-wrap justify-center">
-        <div class="flex justify-center w-full">
-          <div class="relative">
-            <img
-              src="@assets/defaultAvatar.png"
-              class="shadow-xl rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"
-              alt="User Avatar"
-            />
+  <div class="relative flex w-full mt-16 mb-6">
+    <div class="flex items-center px-6">
+      <div>
+        <div class="flex flex-wrap justify-center">
+          <div class="flex justify-center w-full">
+            <div class="relative">
+              <img
+                src="@assets/defaultAvatar.png"
+                class="shadow-xl rounded-full max-w-[150px]"
+                alt="User Avatar"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 text-center">
+          <h3 class="mb-1 text-2xl font-bold leading-normal text-slate-700">
+            Mike Thompson
+          </h3>
+          <div class="mt-0 mb-2 text-xs font-bold uppercase text-slate-400">
+            <i class="mr-2 opacity-75 fas fa-map-marker-alt text-slate-400"></i
+            >Frontend Path
           </div>
         </div>
       </div>
-      <div class="text-center mt-28">
-        <h3 class="mb-1 text-2xl font-bold leading-normal text-slate-700">
-          Mike Thompson
-        </h3>
-        <div class="mt-0 mb-2 text-xs font-bold uppercase text-slate-400">
-          <i class="mr-2 opacity-75 fas fa-map-marker-alt text-slate-400"></i
-          >Frontend Path
-        </div>
-      </div>
-      <div class="py-6 mt-6 text-center border-t border-slate-200">
+      <div class="px-20 py-6 mt-6 ml-8 text-center border-t border-slate-200">
         <div class="flex flex-wrap justify-center">
           <div class="w-full px-4">
             <p class="mb-4 leading-relaxed text-slate-600">
