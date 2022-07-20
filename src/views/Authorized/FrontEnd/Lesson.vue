@@ -96,6 +96,4 @@ if (path.value === '/basics') {
 } else if (path.value === '/semantic-elements') {
   data = semanticElementsData;
 }
-
-console.log(data);
 </script>

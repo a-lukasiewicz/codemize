@@ -9,7 +9,7 @@
         </tr>
       </thead>
       <tbody v-for="(el, idx) in data" :key="idx">
-        <tr v-for="(value, key) in el" :key="(value as string)">
+        <tr v-for="(value, key) in el" :key="value">
           <td>{{ idx }}</td>
           <td>{{ key }}</td>
           <td>{{ value }}</td>
