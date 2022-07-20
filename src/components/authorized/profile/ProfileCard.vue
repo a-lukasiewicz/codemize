@@ -31,7 +31,7 @@
               Melbourne-raised, Brooklyn-based Nick Murphy writes, performs and
               records all of his own music, giving it a warm.
             </p>
-            <div class="grid grid-cols-3 gap-4 md:grid-cols-3">
+            <div class="grid grid-cols-3 gap-4">
               <ProfileBoxCard :value="12" text="Paths completed" />
               <ProfileBoxCard
                 class="col-span-2"
