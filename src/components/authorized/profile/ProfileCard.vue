@@ -1,6 +1,6 @@
 <template>
-  <div class="relative flex w-full mt-16 mb-6">
-    <div class="flex items-center px-6">
+  <div class="relative flex w-full mb-6">
+    <div class="flex flex-col items-center md:px-6">
       <div>
         <div class="flex flex-wrap justify-center">
           <div class="flex justify-center w-full">
@@ -23,7 +23,7 @@
           </div>
         </div>
       </div>
-      <div class="px-20 py-6 mt-6 ml-8 text-center border-t border-slate-200">
+      <div class="py-6 mt-6 text-center border-t md:ml-8 border-slate-200">
         <div class="flex flex-wrap justify-center">
           <div class="w-full px-4">
             <p class="mb-4 leading-relaxed text-slate-600">
@@ -31,7 +31,7 @@
               Melbourne-raised, Brooklyn-based Nick Murphy writes, performs and
               records all of his own music, giving it a warm.
             </p>
-            <div class="grid grid-cols-3 gap-4">
+            <div class="grid grid-cols-3 gap-4 md:grid-cols-3">
               <ProfileBoxCard :value="12" text="Paths completed" />
               <ProfileBoxCard
                 class="col-span-2"
