@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full px-4 py-8 text-black rounded md:px-16">
+  <div v-if="!started" class="w-full px-4 py-8 text-black rounded md:px-16">
     <h1 class="-ml-4 text-3xl font-bold">Frontend Developer Path</h1>
     <p class="-mb-4 font-bold tracking-wider text-main-1">Keep going</p>
     <div class="flex items-center justify-around pt-8">
@@ -36,8 +36,15 @@
       <Technology language="TypeScript" img="typescript.svg" />
     </div>
   </div>
+  <div v-else>Not started template</div>
 </template>
 <script setup lang="ts">
 import Button from '@/components/atoms/Button.vue';
 import Technology from './Technology.vue';
+import { ref } from 'vue';
+import { getUserCourseInfo } from '@/functions/user';
+import { auth } from '@/main';
+
+let started = ref(false);
+started.value = await getUserCourseInfo(auth?.currentUser?.uid as string);
 </script>

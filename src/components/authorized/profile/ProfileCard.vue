@@ -15,11 +15,10 @@
         </div>
         <div class="mt-6 text-center">
           <h3 class="mb-1 text-2xl font-bold leading-normal text-slate-700">
-            Mike Thompson
+            {{ data?.fullName ?? 'Full name' }}
           </h3>
           <div class="mt-0 mb-2 text-xs font-bold uppercase text-slate-400">
-            <i class="mr-2 opacity-75 fas fa-map-marker-alt text-slate-400"></i
-            >Frontend Path
+            Frontend Path
           </div>
         </div>
       </div>
@@ -32,20 +31,20 @@
               records all of his own music, giving it a warm.
             </p>
             <div class="grid grid-cols-3 gap-4">
-              <ProfileBoxCard :value="12" text="Paths completed" />
+              <ProfileBoxCard textInfo="Basic" text="Selected Plan" />
               <ProfileBoxCard
                 class="col-span-2"
-                :value="33"
-                text="Paths completed"
+                :value="data?.email"
+                text="Email"
               />
               <ProfileBoxCard
                 class="col-span-3"
-                :value="12.06"
+                :value="data?.createdAt.toDate().toLocaleDateString()"
                 text="Account created"
               />
-              <ProfileBoxCard :value="12" text="Courses passed" />
-              <ProfileBoxCard :value="12" text="Courses passed" />
-              <ProfileBoxCard :value="12" text="Courses passed" />
+              <ProfileBoxCard :value="0" text="Paths Completed" />
+              <ProfileBoxCard :value="12" text="Lessons Completed" />
+              <ProfileBoxCard :value="12" text="Flashcards unlocked" />
             </div>
             <Button class="my-8 text-white bg-red-500">Delete Account</Button>
           </div>
@@ -57,5 +56,10 @@
 
 <script setup lang="ts">
 import Button from '@/components/atoms/Button.vue';
+import { getUserData } from '@/functions/user';
+import { auth } from '@/main';
 import ProfileBoxCard from './ProfileBoxCard.vue';
+
+const data = await getUserData(auth.currentUser?.uid as string);
+console.log(data?.createdAt.toDate().toLocaleDateString());
 </script>

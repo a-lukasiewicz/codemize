@@ -1,8 +1,14 @@
 <template>
-  <LoadingSpinner v-if="false" />
   <AuthorizedTemplate v-cloak>
     <h3 class="mt-6 mb-6 text-2xl font-semibold">Home</h3>
-    <CurrentPath />
+    <Suspense>
+      <template #default>
+        <CurrentPath />
+      </template>
+      <template #fallback>
+        <LoadingSpinner />
+      </template>
+    </Suspense>
   </AuthorizedTemplate>
 </template>
 

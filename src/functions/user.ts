@@ -19,7 +19,24 @@ export const createUser = async (
   }
 };
 
-export const getUser = async (uid: string) => {
-  const docSnap = await getDoc(doc(db, 'cities', uid));
+export const isUserExsist = async (uid: string) => {
+  const docSnap = await getDoc(doc(db, 'users', uid));
   return docSnap.exists() ? docSnap.data() : '';
+};
+
+export const getUserData = async (uid: string) => {
+  const docSnap = await getDoc(doc(db, 'users', uid));
+  if (docSnap.exists()) {
+    return docSnap.data();
+  } else {
+    console.error('Error while getting user data.');
+  }
+};
+
+export const getUserCourseInfo = async (uid: string) => {
+  const data = await getUserData(uid);
+
+  return data && Object.keys(data).length === 0 && data.constructor === Object
+    ? false
+    : true;
 };

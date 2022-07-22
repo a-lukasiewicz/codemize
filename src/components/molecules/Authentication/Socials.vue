@@ -60,7 +60,7 @@ import {
 import { useRouter } from 'vue-router';
 import Button from '@/components/atoms/Button.vue';
 import { createToastFunction } from '@/helpers/createToast';
-import { createUser, getUser } from '@/functions/user';
+import { createUser, isUserExsist } from '@/functions/user';
 
 const router = useRouter();
 const auth = getAuth();
@@ -114,7 +114,7 @@ const FacebookLogin = () => {
   signInWithPopup(auth, providerFacebook)
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     .then(async (result: any) => {
-      let found = await getUser(auth?.currentUser?.uid as string);
+      let found = await isUserExsist(auth?.currentUser?.uid as string);
       if (found === '') {
         createUser(
           auth?.currentUser?.uid as string,
@@ -137,7 +137,7 @@ const GoogleLogin = () => {
   signInWithPopup(auth, providerGoogle)
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     .then(async (result: any) => {
-      let found = await getUser(auth?.currentUser?.uid as string);
+      let found = await isUserExsist(auth?.currentUser?.uid as string);
 
       if (found === '') {
         createUser(
@@ -161,7 +161,7 @@ const GithubLogin = () => {
   signInWithPopup(auth, providerGithub)
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     .then(async (result: any) => {
-      let found = await getUser(auth?.currentUser?.uid as string);
+      let found = await isUserExsist(auth?.currentUser?.uid as string);
       if (found === '') {
         createUser(
           auth?.currentUser?.uid as string,
