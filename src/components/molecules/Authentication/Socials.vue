@@ -119,7 +119,13 @@ const FacebookLogin = () => {
         createUser(
           auth?.currentUser?.uid as string,
           result.user.reloadUserInfo.providerUserInfo[0].email,
+          result.user.photoURL,
           result.user.displayName
+        );
+        createToastFunction(
+          'Account successfully created',
+          'success',
+          'Now you can verify your account'
         );
       }
       router.push('/home');
@@ -143,7 +149,13 @@ const GoogleLogin = () => {
         createUser(
           auth?.currentUser?.uid as string,
           result.user.reloadUserInfo.providerUserInfo[0].email,
+          result.user.photoURL,
           result.user.displayName
+        );
+        createToastFunction(
+          'Account successfully created',
+          'success',
+          'Now you can verify your account'
         );
       }
       router.push('/home');
@@ -166,7 +178,13 @@ const GithubLogin = () => {
         createUser(
           auth?.currentUser?.uid as string,
           result.user.reloadUserInfo.providerUserInfo[0].email,
+          result.user.photoURL,
           result.user.displayName
+        );
+        createToastFunction(
+          'Account successfully created',
+          'success',
+          'Now you can verify your account'
         );
       }
       router.push('/home');

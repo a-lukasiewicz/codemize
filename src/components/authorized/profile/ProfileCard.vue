@@ -6,8 +6,8 @@
           <div class="flex justify-center w-full">
             <div class="relative">
               <img
-                src="@assets/defaultAvatar.png"
-                class="shadow-xl rounded-full max-w-[150px]"
+                :src="data?.photoURL ?? '@assets/defaultAvatar.png'"
+                class="shadow-xl rounded-full w-[150px]"
                 alt="User Avatar"
               />
             </div>
@@ -46,7 +46,11 @@
               <ProfileBoxCard :value="12" text="Lessons Completed" />
               <ProfileBoxCard :value="12" text="Flashcards unlocked" />
             </div>
-            <Button class="my-8 text-white bg-red-500">Delete Account</Button>
+            <Button
+              class="my-8 text-white bg-red-500"
+              @click="deleteUser(auth.currentUser?.uid as string)"
+              >Delete Account</Button
+            >
           </div>
         </div>
       </div>
@@ -56,9 +60,8 @@
 
 <script setup lang="ts">
 import Button from '@/components/atoms/Button.vue';
-import { getUserData } from '@/functions/user';
+import { deleteUser, getUserData } from '@/functions/user';
 import { auth } from '@/main';
 import ProfileBoxCard from './ProfileBoxCard.vue';
-
 const data = await getUserData(auth.currentUser?.uid as string);
 </script>

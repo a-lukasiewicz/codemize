@@ -1,9 +1,12 @@
-import { doc, getDoc, setDoc, Timestamp } from 'firebase/firestore';
-import { db } from '@/main';
+import { deleteDoc, doc, getDoc, setDoc, Timestamp } from 'firebase/firestore';
+import { auth, db } from '@/main';
+import { createToastFunction } from '@/helpers/createToast';
+import { router } from '@/router';
 
 export const createUser = async (
   uid: string,
   email: string,
+  photoURL?: string,
   fullName?: string
 ) => {
   try {
@@ -11,6 +14,7 @@ export const createUser = async (
       fullName,
       currentPath: {},
       selectedPlan: '',
+      photoURL,
       email,
       createdAt: Timestamp.now().toDate(),
     });
@@ -39,4 +43,16 @@ export const getUserCourseInfo = async (uid: string) => {
   return data && Object.keys(data).length === 0 && data.constructor === Object
     ? false
     : true;
+};
+
+export const deleteUser = async (uid: string) => {
+  try {
+    await deleteDoc(doc(db, 'users', uid));
+    auth?.currentUser?.delete();
+    createToastFunction('Account successfully deleted', 'success');
+    router.push('/');
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } catch (error: any) {
+    createToastFunction(error, 'danger');
+  }
 };
