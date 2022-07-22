@@ -34,15 +34,15 @@
               <ProfileBoxCard textInfo="Basic" text="Selected Plan" />
               <ProfileBoxCard
                 class="col-span-2"
-                :value="data?.email"
+                :textInfo="data?.email"
                 text="Email"
               />
               <ProfileBoxCard
                 class="col-span-3"
-                :value="data?.createdAt.toDate().toLocaleDateString()"
+                :textInfo="data?.createdAt.toDate().toLocaleDateString()"
                 text="Account created"
               />
-              <ProfileBoxCard :value="0" text="Paths Completed" />
+              <ProfileBoxCard :value="12" text="Paths Completed" />
               <ProfileBoxCard :value="12" text="Lessons Completed" />
               <ProfileBoxCard :value="12" text="Flashcards unlocked" />
             </div>
@@ -61,5 +61,4 @@ import { auth } from '@/main';
 import ProfileBoxCard from './ProfileBoxCard.vue';
 
 const data = await getUserData(auth.currentUser?.uid as string);
-console.log(data?.createdAt.toDate().toLocaleDateString());
 </script>

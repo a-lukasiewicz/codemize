@@ -6,7 +6,9 @@
         <Paths />
       </template>
       <template #fallback>
-        <LoadingSpinner />
+        <div class="absolute -ml-6 top-1/2 left-1/2">
+          <LoadingSpinner />
+        </div>
       </template>
     </Suspense>
   </AuthorizedTemplate>
