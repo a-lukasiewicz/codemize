@@ -19,11 +19,11 @@
         <div class="flex justify-end">
           <router-link to="/frontend-path">
             <Button
-              v-if="pathName !== 'FrontendDeveloper'"
+              v-if="pathName !== 'Frontend Developer'"
               :disabled="disabled"
               class="text-right text-white bg-main-1"
               @click="addPathToUser(auth?.currentUser?.uid as string)"
-              >{{ buttonText }}</Button
+              >Join Path</Button
             >
             <Button
               v-else

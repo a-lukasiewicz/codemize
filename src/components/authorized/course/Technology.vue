@@ -10,7 +10,7 @@
       <progress
         class="w-28 md:w-40 lg:w-48 progress progress-success"
         :value="value"
-        max="100"
+        :max="numberOfLessons"
       ></progress>
       <p class="hidden text-xl text-right md:block md:text-left md:mx-8">
         {{ value }} / {{ numberOfLessons }}
@@ -41,6 +41,4 @@ const props = defineProps({
 let data = await getNumberOfCourseLessons();
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const numberOfLessons = (data as any)[props.choice].numberOfLessons as number;
-
-console.log();
 </script>

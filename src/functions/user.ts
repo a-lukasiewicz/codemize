@@ -62,8 +62,7 @@ export const addPathToUser = async (uid: string) => {
       currentPath: {
         pathID: 'QK3n5NCwOKrfjyOYr9Nh',
         currentTech: 'HTML',
-        percentOfPath: 0,
-        percentOfTech: 0,
+        doneOfTech: 0,
       },
     });
   } catch (error) {

@@ -22,7 +22,7 @@
   </div>
   <div class="grid grid-cols-1 gap-4 place-items-center">
     <Technology
-      :value="user?.currentPath.percentOfTech"
+      :value="user?.currentPath.doneOfTech"
       :buttonText="buttonText"
       choice="HTML"
       techName="HTML5"
@@ -35,27 +35,27 @@
     <Technology
       :value="0"
       disabled
-      :buttonText="buttonText"
+      buttonText="Start now"
       choice="CSS"
       techName="CSS3"
     />
     <Technology
       :value="0"
       disabled
-      :buttonText="buttonText"
+      buttonText="Start now"
       choice="JS"
       techName="JavaScript"
     />
     <Technology
       :value="0"
-      :buttonText="buttonText"
+      buttonText="Start now"
       disabled
       choice="REACT"
       techName="React"
     />
     <Technology
       :value="0"
-      :buttonText="buttonText"
+      buttonText="Start now"
       disabled
       choice="TS"
       techName="Typescript"
@@ -69,9 +69,11 @@ import { auth } from '@/main';
 import { ref } from 'vue';
 
 let user = await getUserData(auth?.currentUser?.uid as string);
-console.log(user?.currentPath.percentOfPath);
 
-let started = ref(false);
-started.value = user?.currentPath.percentOfPath === 0 ? false : true;
-const buttonText = started.value ? 'Continue learning' : 'Start now';
+let buttonText = ref('');
+if (user?.currentPath.doneOfTech === 0) {
+  buttonText.value = 'Start now';
+} else if (user?.currentPath.doneOfTech === 4) {
+  buttonText.value = 'Finished!';
+}
 </script>
