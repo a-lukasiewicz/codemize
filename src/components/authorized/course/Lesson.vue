@@ -113,9 +113,6 @@ let disabled = ref(false);
 
 onMounted(async () => {
   const userData = await getUserData(auth?.currentUser?.uid as string);
-  console.log(userData?.currentPath?.doneOfTech);
-  console.log(id);
-
   if (userData?.currentPath?.doneOfTech !== id) {
     disabled.value = true;
   }

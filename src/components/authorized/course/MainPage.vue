@@ -14,7 +14,12 @@
       class="-ml-4 text-xs tracking-tighter md:ml-0 md:tracking-normal steps md:text-base"
     >
       <li class="step step-primary">HTML5</li>
-      <li class="step">CSS3</li>
+      <li
+        :class="{ 'step-primary': user?.currentPath.doneOfTech === 4 }"
+        class="step"
+      >
+        CSS3
+      </li>
       <li class="step">JavaScript</li>
       <li class="step">React</li>
       <li class="step">Typescript</li>

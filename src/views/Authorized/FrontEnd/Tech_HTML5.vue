@@ -21,50 +21,20 @@
       </li>
     </ul>
     <hr class="border-[2px] my-8" />
-
-    <router-link to="/basics">
-      <div class="flex justify-between w-full">
-        <h3 class="my-6 text-2xl font-semibold">Basics</h3>
-        <img src="@assets/arrow-right.svg" alt="Arrow" />
-      </div>
-    </router-link>
-
-    <router-link to="/tables">
-      <div class="flex justify-between w-full">
-        <h3 class="my-6 text-2xl font-semibold">Tables</h3>
-        <img src="@assets/arrow-right.svg" alt="Arrow" />
-      </div>
-    </router-link>
-
-    <router-link to="/forms">
-      <div class="flex justify-between w-full">
-        <h3 class="my-6 text-2xl font-semibold">Forms</h3>
-        <img src="@assets/arrow-right.svg" alt="Arrow" />
-      </div>
-    </router-link>
-
-    <router-link to="/semantic-elements">
-      <div class="flex justify-between w-full">
-        <h3 class="my-6 text-2xl font-semibold">Semantic Elements</h3>
-        <img src="@assets/arrow-right.svg" alt="Arrow" />
-      </div>
-    </router-link>
-
-    <router-link to="/all-flashcards">
-      <div class="flex justify-between w-full">
-        <h3 class="my-6 text-2xl font-semibold">All flashcards</h3>
-        <img src="@assets/arrow-right.svg" alt="Arrow" />
-      </div>
-    </router-link>
-
-    <router-link to="/interview-questions">
-      <div class="flex justify-between w-full">
-        <h3 class="my-6 text-2xl font-semibold">Interview questions</h3>
-        <img src="@assets/arrow-right.svg" alt="Arrow" />
-      </div>
-    </router-link>
+    <Suspense>
+      <template #default>
+        <LessonStructure />
+      </template>
+      <template #fallback>
+        <div class="absolute -ml-6 top-1/2 left-1/2">
+          <LoadingSpinner />
+        </div>
+      </template>
+    </Suspense>
   </AuthorizedTemplate>
 </template>
 <script setup lang="ts">
 import AuthorizedTemplate from '@views/Authorized/AuthorizedTemplate.vue';
+import LessonStructure from '../../../components/authorized/course/LessonStructure.vue';
+import LoadingSpinner from '@/components/atoms/LoadingSpinner.vue';
 </script>
