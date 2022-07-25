@@ -18,8 +18,17 @@
         <p class="mb-4 opcacity-60">{{ pathDescription }}</p>
         <div class="flex justify-end">
           <router-link to="/frontend-path">
-            <Button :disabled="disabled" class="text-right text-white bg-main-1"
+            <Button
+              v-if="pathName !== 'FrontendDeveloper'"
+              :disabled="disabled"
+              class="text-right text-white bg-main-1"
               >Join path</Button
+            >
+            <Button
+              v-else
+              :disabled="disabled"
+              class="text-right text-white bg-main-1"
+              >{{ buttonText }}</Button
             >
           </router-link>
         </div>
@@ -30,10 +39,18 @@
 
 <script setup lang="ts">
 import Button from '@/components/atoms/Button.vue';
+import { getUserCourseInfo } from '@/functions/user';
+import { auth } from '@/main';
+import { ref } from 'vue';
 
 defineProps({
   pathName: { type: String, default: '' },
   pathDescription: { type: String, default: '' },
   disabled: { type: Boolean, default: false },
 });
+
+let started = ref(false);
+started.value = await getUserCourseInfo(auth?.currentUser?.uid as string);
+
+const buttonText = started.value ? 'Continue learning' : 'Join path';
 </script>

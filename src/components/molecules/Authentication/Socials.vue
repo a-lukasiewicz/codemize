@@ -60,6 +60,7 @@ import {
 import { useRouter } from 'vue-router';
 import Button from '@/components/atoms/Button.vue';
 import { createToastFunction } from '@/helpers/createToast';
+import { createUser, isUserExsist } from '@/functions/user';
 
 const router = useRouter();
 const auth = getAuth();
@@ -68,10 +69,13 @@ const providerGoogle = new GoogleAuthProvider();
 const providerFacebook = new FacebookAuthProvider();
 const providerGithub = new GithubAuthProvider();
 
+providerGoogle.addScope('email');
+
 const props = defineProps({
   action: { type: String, default: '' },
   email: { type: String, default: '' },
   password: { type: String, default: '' },
+  fullName: { type: String, default: '' },
 });
 
 const login = (e: Event) => {
@@ -93,6 +97,7 @@ const signup = (e: Event) => {
   e.preventDefault();
   createUserWithEmailAndPassword(auth, props.email, props.password)
     .then(() => {
+      createUser(props.email, props.fullName);
       router.push('/home');
       createToastFunction(
         'Account successfully created',
@@ -107,7 +112,22 @@ const signup = (e: Event) => {
 
 const FacebookLogin = () => {
   signInWithPopup(auth, providerFacebook)
-    .then(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    .then(async (result: any) => {
+      let found = await isUserExsist(auth?.currentUser?.uid as string);
+      if (found === '') {
+        createUser(
+          auth?.currentUser?.uid as string,
+          result.user.reloadUserInfo.providerUserInfo[0].email,
+          result.user.photoURL,
+          result.user.displayName
+        );
+        createToastFunction(
+          'Account successfully created',
+          'success',
+          'Now you can verify your account'
+        );
+      }
       router.push('/home');
     })
     .catch((error) => {
@@ -121,7 +141,23 @@ const FacebookLogin = () => {
 
 const GoogleLogin = () => {
   signInWithPopup(auth, providerGoogle)
-    .then(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    .then(async (result: any) => {
+      let found = await isUserExsist(auth?.currentUser?.uid as string);
+
+      if (found === '') {
+        createUser(
+          auth?.currentUser?.uid as string,
+          result.user.reloadUserInfo.providerUserInfo[0].email,
+          result.user.photoURL,
+          result.user.displayName
+        );
+        createToastFunction(
+          'Account successfully created',
+          'success',
+          'Now you can verify your account'
+        );
+      }
       router.push('/home');
     })
     .catch((error) => {
@@ -135,7 +171,22 @@ const GoogleLogin = () => {
 
 const GithubLogin = () => {
   signInWithPopup(auth, providerGithub)
-    .then(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    .then(async (result: any) => {
+      let found = await isUserExsist(auth?.currentUser?.uid as string);
+      if (found === '') {
+        createUser(
+          auth?.currentUser?.uid as string,
+          result.user.reloadUserInfo.providerUserInfo[0].email,
+          result.user.photoURL,
+          result.user.displayName
+        );
+        createToastFunction(
+          'Account successfully created',
+          'success',
+          'Now you can verify your account'
+        );
+      }
       router.push('/home');
     })
     .catch((error) => {

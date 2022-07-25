@@ -13,7 +13,9 @@
     </div>
     <h3 class="mt-6 mb-6 text-2xl font-semibold">Control your progress:</h3>
     <div class="flex justify-center w-full py-8">
-      <ul class="steps">
+      <ul
+        class="-ml-4 text-xs tracking-tighter md:ml-0 md:tracking-normal steps md:text-base"
+      >
         <li class="step step-primary">HTML5</li>
         <li class="step">CSS3</li>
         <li class="step">JavaScript</li>
@@ -24,11 +26,10 @@
     <div class="grid grid-cols-1 gap-4 place-items-center">
       <Technology :value="74" buttonText="Continue Learning" techName="HTML5" />
     </div>
-    <h3></h3>
     <h3 class="mt-6 mb-6 text-2xl font-semibold">
       Finish previous courses to unlock that technologies:
     </h3>
-    <div class="grid grid-cols-1 gap-4 place-items-center">
+    <div class="grid grid-cols-1 gap-4 mb-12 place-items-center">
       <Technology
         :value="0"
         disabled

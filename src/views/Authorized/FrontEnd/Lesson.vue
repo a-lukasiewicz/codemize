@@ -13,7 +13,7 @@
       alt="Semantic elements"
     />
     <h3 class="mt-6 mb-6 text-xl font-semibold">Practical knowledge</h3>
-    <div class="mockup-code">
+    <div class="text-sm md:text-base mockup-code">
       <pre data-prefix="$"><code>{{data.practicalKnowledge[0]}}</code></pre>
     </div>
     <Video class="pt-2" :src="data.practicalKnowledge[1]" />
@@ -25,18 +25,24 @@
     </ul>
     <h3 class="mt-6 mb-6 text-xl font-semibold">Practise</h3>
     <Text :text="data.recap[0]" />
-    <ul class="list-disc list-inside">
+    <ul>
       <li>
-        <a class="hover:text-main-1" :href="data.recap[1]">{{
+        <a class="hidden md:block hover:text-main-1" :href="data.recap[1]">{{
           data.recap[1]
+        }}</a>
+        <a class="md:hidden hover:text-main-1" :href="data.recap[1]">{{
+          data.recap[1].length > 30 ? 'LINK' : data.recap[1]
         }}</a>
       </li>
     </ul>
     <div v-if="data.usefulLinks">
       <h3 class="mt-6 mb-6 text-xl font-semibold">Useful links</h3>
-      <ul v-for="el in data.usefulLinks" :key="el">
+      <ul v-for="el in data.usefulLinks" :key="el" class="list-inside">
         <li class="my-2">
-          <a class="hover:text-main-1" :href="el">{{ el }}</a>
+          <a class="hidden md:block hover:text-main-1" :href="el">{{ el }}</a>
+          <a class="md:hidden hover:text-main-1" :href="el">{{
+            el.length > 30 ? 'LINK' : el
+          }}</a>
         </li>
       </ul>
     </div>

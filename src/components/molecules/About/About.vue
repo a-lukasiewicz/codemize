@@ -1,5 +1,5 @@
 <template>
-  <div class="relative -mt-12 lg:-mt-24">
+  <!-- <div class="relative -mt-12 lg:-mt-24">
     <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
@@ -12,18 +12,27 @@
         </g>
       </g>
     </svg>
-  </div>
+  </div> -->
   <section id="aboutUs" class="py-24 bg-main-5">
     <div class="flex flex-col">
       <Heading title="Remotely and at any time" :divider="true" />
       <div class="flex flex-col justify-between px-10 lg:px-40">
-        <AboutUsOption iconURL="remotely.svg" imagePosition="left" linkTitle="Remote learning" class="pt-6 lg:pt-0" />
-        <AboutUsOption iconURL="progress.svg" linkTitle="Control your progress" class="pt-6" />
+        <AboutUsOption
+          iconURL="remotely.svg"
+          imagePosition="left"
+          linkTitle="Remote learning"
+          class="pt-6 lg:pt-0"
+        />
+        <AboutUsOption
+          iconURL="progress.svg"
+          linkTitle="Control your progress"
+          class="pt-6"
+        />
       </div>
     </div>
   </section>
 </template>
 <script setup lang="ts">
-import AboutUsOption from "./AboutUsOption.vue";
-import Heading from "../../atoms/Heading.vue";
+import AboutUsOption from './AboutUsOption.vue';
+import Heading from '../../atoms/Heading.vue';
 </script>
