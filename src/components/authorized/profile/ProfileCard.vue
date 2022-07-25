@@ -6,7 +6,7 @@
           <div class="flex justify-center w-full">
             <div class="relative">
               <img
-                :src="data?.photoURL ?? '@assets/defaultAvatar.png'"
+                :src="data?.photoURL ?? '@/assets/defaultAvatar.png'"
                 class="shadow-xl rounded-full w-[150px]"
                 alt="User Avatar"
               />

@@ -42,7 +42,7 @@
 import Button from '@/components/atoms/Button.vue';
 import Technology from './Technology.vue';
 import { ref } from 'vue';
-import { getUserCourseInfo } from '@/functions/user';
+import { getUserCourseInfo } from '@/functions/course';
 import { auth } from '@/main';
 
 let started = ref(false);
