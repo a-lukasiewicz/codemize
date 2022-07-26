@@ -27,18 +27,18 @@
           >
             <li>
               <router-link
-                to="/login"
-                class="inline-block px-4 py-2 font-bold no-underline hover:text-yellowMain"
-                >Log in</router-link
-              >
-            </li>
-            <li>
-              <router-link
                 class="inline-block px-4 py-2 font-bold no-underline hover:text-yellowMain"
                 to="/pricing"
               >
                 Pricing
               </router-link>
+            </li>
+            <li>
+              <router-link
+                to="/login"
+                class="inline-block px-4 py-2 font-bold no-underline hover:text-yellowMain"
+                >Log in</router-link
+              >
             </li>
           </ul>
         </div>

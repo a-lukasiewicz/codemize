@@ -36,7 +36,10 @@
               FRONTEND PATH DESCRIPTION
             </p>
             <div class="grid grid-cols-3 gap-4">
-              <ProfileBoxCard textInfo="Basic" text="Selected Plan" />
+              <ProfileBoxCard
+                :textInfo="data?.selectedPlan"
+                text="Selected Plan"
+              />
               <ProfileBoxCard
                 class="col-span-2"
                 :textInfo="data?.email"
