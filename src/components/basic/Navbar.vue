@@ -33,18 +33,12 @@
               >
             </li>
             <li>
-              <a
+              <router-link
                 class="inline-block px-4 py-2 font-bold no-underline hover:text-yellowMain"
-                href="#pricing"
-                >Pricing</a
+                to="/pricing"
               >
-            </li>
-            <li>
-              <a
-                class="inline-block px-4 py-2 font-bold hover:text-yellowMain"
-                href="#aboutUs"
-                >About Us</a
-              >
+                Pricing
+              </router-link>
             </li>
           </ul>
         </div>
@@ -68,18 +62,12 @@
             >
           </li>
           <li class="mr-3">
-            <a
-              class="inline-block px-4 py-2 font-bold hover:text-yellowMain"
-              href="#aboutUs"
-              >About Us</a
-            >
-          </li>
-          <li class="mr-3">
-            <a
+            <router-link
               class="inline-block px-4 py-2 font-bold no-underline hover:text-yellowMain"
-              href="#pricing"
-              >Pricing</a
+              to="/pricing"
             >
+              Pricing
+            </router-link>
           </li>
         </ul>
         <router-link

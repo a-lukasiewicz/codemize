@@ -16,6 +16,7 @@ import Tech_HTML5 from './views/Authorized/FrontEnd/Tech_HTML5.vue';
 import InterviewQuestions from './views/Authorized/FrontEnd/InterviewQuestions.vue';
 import Lesson from './views/Authorized/FrontEnd/Lesson.vue';
 import AllFlashcards from './views/Authorized/FrontEnd/AllFlashcards.vue';
+import Pricing from './views/nonAuthorized/Pricing.vue';
 
 export const routes: RouteRecordRaw[] = [
   {
@@ -25,6 +26,10 @@ export const routes: RouteRecordRaw[] = [
   {
     path: '/about',
     component: About,
+  },
+  {
+    path: '/pricing',
+    component: Pricing,
   },
   {
     path: '/login',

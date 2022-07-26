@@ -20,7 +20,7 @@ export const createUser = async (
     await setDoc(doc(db, 'users', uid), {
       fullName,
       currentPath: {},
-      selectedPlan: '',
+      selectedPlan: 'BASIC',
       photoURL,
       email,
       createdAt: Timestamp.now().toDate(),

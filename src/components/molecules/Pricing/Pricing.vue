@@ -1,5 +1,5 @@
 <template>
-  <section id="pricing" class="py-24 bg-gray-100">
+  <section id="pricing" class="w-full py-24 bg-gray-100">
     <div class="container px-2 pt-4 pb-12 mx-auto text-gray-800">
       <h1
         class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
@@ -9,36 +9,11 @@
       <div class="w-full mb-4">
         <div class="divider"></div>
       </div>
-      <div class="flex flex-col justify-center pt-12 my-12 sm:flex-row sm:my-4">
+      <div
+        class="flex flex-col items-center justify-center pt-12 my-12 sm:my-4"
+      >
         <div
-          class="flex flex-col w-5/6 mx-auto mt-4 bg-white rounded-none lg:w-1/4 lg:mx-0 lg:rounded-l-lg"
-        >
-          <div
-            class="flex-1 overflow-hidden text-gray-600 bg-white rounded-t rounded-b-none shadow"
-          >
-            <div class="p-8 text-3xl font-bold text-center border-b-4">
-              Light
-            </div>
-            <ul class="w-full text-sm text-center">
-              <li class="py-4 border-b">Access to most basic courses</li>
-            </ul>
-          </div>
-          <div
-            class="flex-none p-6 mt-auto overflow-hidden bg-white rounded-t-none rounded-b shadow"
-          >
-            <div
-              class="w-full pt-6 text-3xl font-bold text-center text-gray-600"
-            >
-              5 USD
-              <span class="text-base">/ per month</span>
-            </div>
-            <div class="flex items-center justify-center">
-              <Button class="text-black bg-gray-200">Join Us</Button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="z-10 flex flex-col w-5/6 mx-auto mt-4 bg-white rounded-lg shadow-lg lg:w-1/3 lg:mx-0 sm:-mt-6"
+          class="z-10 flex flex-col w-5/6 mx-auto mt-4 bg-white border-[3px] border-main-1 rounded-lg shadow-lg lg:w-1/3 lg:mx-0 sm:-mt-6"
         >
           <div
             class="flex-1 overflow-hidden bg-white rounded-t rounded-b-none shadow"
@@ -46,9 +21,11 @@
             <div class="w-full p-8 text-3xl font-bold text-center">Basic</div>
             <div class="w-full h-1 py-0 my-0 rounded-t gradient"></div>
             <ul class="w-full text-base font-bold text-center">
-              <li class="py-4 border-b">Access to every course and path available on Codemize</li>
+              <li class="py-4 border-b">
+                Access to every course and path available on Codemize
+              </li>
               <li class="py-4 border-b">Tech support</li>
-              <li class="py-4 border-b">Possiblity to download your notes</li>
+              <li class="py-4 border-b">Control your progress</li>
             </ul>
           </div>
           <div
@@ -58,8 +35,10 @@
               25 USD
               <span class="text-base">/ per month</span>
             </div>
-            <div class="flex items-center justify-center">
-              <Button class="text-black bg-gray-200">Join Us</Button>
+            <div class="flex items-center justify-center mt-4">
+              <router-link to="/login">
+                <Button class="text-black bg-gray-200">Join Us</Button>
+              </router-link>
             </div>
           </div>
         </div>
@@ -69,12 +48,20 @@
           <div
             class="flex-1 overflow-hidden text-gray-600 bg-white rounded-t rounded-b-none shadow"
           >
-            <div class="p-8 text-3xl font-bold text-center border-b-4">Company</div>
+            <div class="p-8 text-3xl font-bold text-center border-b-4">
+              Company
+            </div>
             <ul class="w-full text-sm text-center">
-              <li class="py-4 border-b">Add members of your team & control their progress</li>
-              <li class="py-4 border-b">Access to every course and path available on Codemize</li>
+              <li class="py-4 border-b">
+                Add members of your team & control their progress
+              </li>
+              <li class="py-4 border-b">
+                Access to every course and path available on Codemize
+              </li>
               <li class="py-4 border-b">Tech support</li>
-              <li class="py-4 border-b">Possiblity to download your notes</li>
+              <li class="py-4 border-b">
+                Access to flashcards and to interview questions
+              </li>
             </ul>
           </div>
           <div
@@ -85,7 +72,7 @@
             >
               Invidual pricing
             </div>
-            <div class="flex items-center justify-center">
+            <div class="flex items-center justify-center mt-4">
               <Button class="text-black bg-gray-200">Contact Us</Button>
             </div>
           </div>
@@ -95,4 +82,5 @@
   </section>
 </template>
 <script setup lang="ts">
-import Button from '../../atoms/Button.vue';</script>
+import Button from '../../atoms/Button.vue';
+</script>

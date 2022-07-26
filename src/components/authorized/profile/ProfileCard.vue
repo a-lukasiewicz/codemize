@@ -33,9 +33,7 @@
         <div class="flex flex-wrap justify-center">
           <div class="w-full px-4">
             <p class="mb-4 leading-relaxed text-slate-600">
-              An artist of considerable range, Mike is the name taken by
-              Melbourne-raised, Brooklyn-based Nick Murphy writes, performs and
-              records all of his own music, giving it a warm.
+              FRONTEND PATH DESCRIPTION
             </p>
             <div class="grid grid-cols-3 gap-4">
               <ProfileBoxCard textInfo="Basic" text="Selected Plan" />

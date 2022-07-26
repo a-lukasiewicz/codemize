@@ -17,7 +17,7 @@
           job ready.
         </p>
         <div class="flex justify-center w-full md:justify-end">
-          <router-link to="/sign-up">
+          <router-link to="/pricing">
             <Button class="text-white bg-main-1">Join us!</Button>
           </router-link>
         </div>
