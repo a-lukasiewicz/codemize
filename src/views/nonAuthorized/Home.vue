@@ -2,8 +2,11 @@
   <div id="container">
     <LoadingText />
 
-    <Navbar />
-    <Hero />
+    <div
+      class="relative flex flex-col items-center w-full min-h-screen overflow-hidden"
+    >
+      <Hero />
+    </div>
     <About />
     <WhyUs experience />
     <Companies />
@@ -24,7 +27,6 @@
   </div>
 </template>
 <script setup lang="ts">
-import Navbar from '../../components/basic/Navbar.vue';
 import Hero from '../../components/molecules/Hero/Hero.vue';
 import About from '../../components/molecules/About/About.vue';
 import ActionSection from '../../components/molecules/Ratings/ActionSection.vue';

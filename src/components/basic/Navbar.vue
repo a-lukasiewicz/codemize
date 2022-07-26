@@ -1,5 +1,5 @@
 <template>
-  <nav id="header" class="w-full text-main-5 bg-main-2">
+  <nav id="header" class="w-full text-main-5">
     <div
       class="container flex flex-wrap items-center w-full py-2 mx-auto mt-0 lg:justify-between"
     >
