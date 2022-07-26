@@ -74,7 +74,7 @@ const logout = () => {
     .then(() => {
       isUserLogged.value = false;
       router.push('/');
-      createToastFunction('Wylogowano poprawnie', 'success');
+      createToastFunction('Log out successfully', 'success');
     })
     .catch((error) => {
       createToastFunction(error, 'danger');

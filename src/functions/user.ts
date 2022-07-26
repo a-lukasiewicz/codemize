@@ -1,4 +1,11 @@
-import { deleteDoc, doc, getDoc, setDoc, Timestamp } from 'firebase/firestore';
+import {
+  deleteDoc,
+  doc,
+  getDoc,
+  setDoc,
+  Timestamp,
+  updateDoc,
+} from 'firebase/firestore';
 import { auth, db } from '@/main';
 import { createToastFunction } from '@/helpers/createToast';
 import { router } from '@/router';
@@ -13,7 +20,7 @@ export const createUser = async (
     await setDoc(doc(db, 'users', uid), {
       fullName,
       currentPath: {},
-      selectedPlan: '',
+      selectedPlan: 'BASIC',
       photoURL,
       email,
       createdAt: Timestamp.now().toDate(),
@@ -37,14 +44,6 @@ export const getUserData = async (uid: string) => {
   }
 };
 
-export const getUserCourseInfo = async (uid: string) => {
-  const data = await getUserData(uid);
-
-  return data && Object.keys(data).length === 0 && data.constructor === Object
-    ? false
-    : true;
-};
-
 export const deleteUser = async (uid: string) => {
   try {
     await deleteDoc(doc(db, 'users', uid));
@@ -54,5 +53,19 @@ export const deleteUser = async (uid: string) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     createToastFunction(error, 'danger');
+  }
+};
+
+export const addPathToUser = async (uid: string) => {
+  try {
+    await updateDoc(doc(db, 'users', uid), {
+      currentPath: {
+        pathID: 'QK3n5NCwOKrfjyOYr9Nh',
+        currentTech: 'HTML',
+        doneOfTech: 0,
+      },
+    });
+  } catch (error) {
+    console.error(error);
   }
 };

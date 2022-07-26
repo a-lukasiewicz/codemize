@@ -1,5 +1,5 @@
 <template>
-  <nav id="header" class="fixed top-0 z-30 w-full text-main-5 bg-main-2">
+  <nav id="header" :class="{ 'bg-main-2': blue }" class="w-full text-main-5">
     <div
       class="container flex flex-wrap items-center w-full py-2 mx-auto mt-0 lg:justify-between"
     >
@@ -27,23 +27,17 @@
           >
             <li>
               <router-link
+                class="inline-block px-4 py-2 font-bold no-underline hover:text-yellowMain"
+                to="/pricing"
+              >
+                Pricing
+              </router-link>
+            </li>
+            <li>
+              <router-link
                 to="/login"
                 class="inline-block px-4 py-2 font-bold no-underline hover:text-yellowMain"
                 >Log in</router-link
-              >
-            </li>
-            <li>
-              <a
-                class="inline-block px-4 py-2 font-bold no-underline hover:text-yellowMain"
-                href="#pricing"
-                >Pricing</a
-              >
-            </li>
-            <li>
-              <a
-                class="inline-block px-4 py-2 font-bold hover:text-yellowMain"
-                href="#aboutUs"
-                >About Us</a
               >
             </li>
           </ul>
@@ -56,37 +50,29 @@
       <div
         id="nav-content"
         :class="{ visible: showMenu }"
-        class="z-20 flex-grow hidden w-full p-4 mt-2 text-xl text-white bg-white lg:flex lg:items-center lg:w-auto lg:mt-0 lg:bg-transparent lg:p-0"
+        class="flex-grow hidden w-full p-4 mt-2 text-xl text-white bg-white lg:flex lg:items-center lg:w-auto lg:mt-0 lg:bg-transparent lg:p-0"
         @click="showMenu = !showMenu"
       >
         <ul class="items-center justify-end flex-1 list-reset lg:flex">
           <li v-if="isUserLogged" class="mr-3">
-            <router-link
-              to="/home"
-              class="inline-block px-4 py-2 font-bold hover:text-yellowMain"
+            <router-link to="/home" class="inline-block px-4 py-2 font-bold"
               >Your workspace</router-link
             >
           </li>
           <li class="mr-3">
-            <a
-              class="inline-block px-4 py-2 font-bold hover:text-yellowMain"
-              href="#aboutUs"
-              >About Us</a
+            <router-link
+              class="z-10 inline-block px-4 py-2 font-bold no-underline"
+              to="/pricing"
             >
-          </li>
-          <li class="mr-3">
-            <a
-              class="inline-block px-4 py-2 font-bold no-underline hover:text-yellowMain"
-              href="#pricing"
-              >Pricing</a
-            >
+              Pricing
+            </router-link>
           </li>
         </ul>
         <router-link
           v-if="!isUserLogged"
           id="navAction"
           to="/login"
-          class="px-8 py-2 mx-auto font-bold text-white transition duration-300 ease-in-out transform shadow-lg bg-yellowMain p2-4 rounded-xl lg:mx-0 focus:outline-none focus:shadow-outline hover:scale-105"
+          class="inline-block px-4 py-2 font-bold no-underline hover:text-yellowMain"
           >Login</router-link
         >
         <router-link
@@ -107,4 +93,9 @@ import Logo from '../atoms/Logo.vue';
 
 const showMenu = ref(false);
 const isUserLogged = ref(false);
+
+defineProps({
+  loaded: { type: Boolean, default: false },
+  blue: { type: Boolean, default: false },
+});
 </script>

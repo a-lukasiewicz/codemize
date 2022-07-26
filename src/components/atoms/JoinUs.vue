@@ -11,7 +11,9 @@
         <span class="ml-4 md:ml-0"></span> sed blanditiis hic, fugiat odio minus
         non nobis, molestias voluptatibus.
       </p>
-      <Button class="mt-4 text-white bg-main-1">Join Us!</Button>
+      <router-link to="/pricing">
+        <Button class="mt-4 text-white bg-main-1">Join Us!</Button>
+      </router-link>
     </div>
   </section>
 </template>

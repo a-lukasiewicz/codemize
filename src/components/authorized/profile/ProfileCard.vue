@@ -6,8 +6,15 @@
           <div class="flex justify-center w-full">
             <div class="relative">
               <img
-                :src="data?.photoURL ?? '@assets/defaultAvatar.png'"
+                v-if="data?.photoURL"
+                :src="data?.photoURL"
                 class="shadow-xl rounded-full w-[150px]"
+                alt="User Avatar"
+              />
+              <img
+                v-else
+                class="shadow-xl rounded-full w-[150px]"
+                src="@assets/defaultAvatar.png"
                 alt="User Avatar"
               />
             </div>
@@ -26,12 +33,13 @@
         <div class="flex flex-wrap justify-center">
           <div class="w-full px-4">
             <p class="mb-4 leading-relaxed text-slate-600">
-              An artist of considerable range, Mike is the name taken by
-              Melbourne-raised, Brooklyn-based Nick Murphy writes, performs and
-              records all of his own music, giving it a warm.
+              FRONTEND PATH DESCRIPTION
             </p>
             <div class="grid grid-cols-3 gap-4">
-              <ProfileBoxCard textInfo="Basic" text="Selected Plan" />
+              <ProfileBoxCard
+                :textInfo="data?.selectedPlan"
+                text="Selected Plan"
+              />
               <ProfileBoxCard
                 class="col-span-2"
                 :textInfo="data?.email"
@@ -42,9 +50,15 @@
                 :textInfo="data?.createdAt.toDate().toLocaleDateString()"
                 text="Account created"
               />
-              <ProfileBoxCard :value="12" text="Paths Completed" />
-              <ProfileBoxCard :value="12" text="Lessons Completed" />
-              <ProfileBoxCard :value="12" text="Flashcards unlocked" />
+              <ProfileBoxCard :value="0" text="Paths Completed" />
+              <ProfileBoxCard
+                :value="data?.currentPath?.doneOfTech"
+                text="Lessons Completed"
+              />
+              <ProfileBoxCard
+                :value="data?.currentPath?.doneOfTech * 4"
+                text="Flashcards unlocked"
+              />
             </div>
             <Button
               class="my-8 text-white bg-red-500"
@@ -57,7 +71,6 @@
     </div>
   </div>
 </template>
-
 <script setup lang="ts">
 import Button from '@/components/atoms/Button.vue';
 import { deleteUser, getUserData } from '@/functions/user';

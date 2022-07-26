@@ -1,21 +1,28 @@
 <template>
   <div
-    class="flex items-center justify-end w-full py-8 pr-5 mx-8 rounded-md lg:w-4/5 bg-main-4"
+    class="flex items-center justify-around w-full py-8 pr-5 mx-8 rounded-md lg:justify-end lg:w-4/5 bg-main-4"
   >
-    <h1 class="text-base font-bold md:text-2xl">{{ techName }}</h1>
+    <div class="flex items-center">
+      <h1 class="text-2xl font-bold">{{ techName }}</h1>
+      <span
+        v-if="value === 4"
+        class="ml-4 text-sm font-bold bg-green-400 border-0 badge"
+        >Completed</span
+      >
+    </div>
     <div class="flex flex-col justify-end ml-6 md:items-center md:flex-row">
       <p class="text-xl text-right md:hidden md:text-left md:mx-8">
-        {{ value }} / 100
+        {{ value }} / {{ numberOfLessons }}
       </p>
       <progress
         class="w-28 md:w-40 lg:w-48 progress progress-success"
         :value="value"
-        max="100"
+        :max="numberOfLessons"
       ></progress>
       <p class="hidden text-xl text-right md:block md:text-left md:mx-8">
-        {{ value }} / 100
+        {{ value }} / {{ numberOfLessons }}
       </p>
-      <router-link to="html5">
+      <router-link to="/frontend-path/html5">
         <Button
           :disabled="disabled"
           :class="{ 'opacity-10': disabled }"
@@ -28,11 +35,17 @@
 </template>
 <script setup lang="ts">
 import Button from '@/components/atoms/Button.vue';
+import { getNumberOfCourseLessons } from '@/functions/course';
 
-defineProps({
+const props = defineProps({
   techName: { type: String, default: '' },
   disabled: { type: Boolean, default: false },
   buttonText: { type: String, default: '' },
+  choice: { type: String, default: '' },
   value: { type: Number, default: 0 },
 });
+
+let data = await getNumberOfCourseLessons();
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const numberOfLessons = (data as any)[props.choice].numberOfLessons as number;
 </script>

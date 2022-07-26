@@ -3,14 +3,18 @@
     <div
       class="flex-1 py-3 overflow-hidden bg-white rounded-t rounded-b-none shadow"
     >
+      <div class="flex items-center py-2 avatar">
+        <div class="w-12 ml-3 rounded-full">
+          <img src="https://placeimg.com/192/192/people" />
+        </div>
+        <p class="w-full px-6 text-xs text-gray-600 md:text-sm">{{ author }}</p>
+      </div>
       <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-        <p class="w-full px-6 text-xs text-gray-600 md:text-sm">Option 1</p>
         <div class="w-full px-6 text-xl font-bold text-gray-800">
-          Lorem ipsum dolor sit amet.
+          {{ title }}
         </div>
         <p class="px-6 mb-5 text-base text-gray-800">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
-          ipsum eu nunc commodo posuere et sit amet ligula.
+          {{ description }}
         </p>
       </a>
     </div>
@@ -18,11 +22,19 @@
       class="flex-none p-6 mt-auto overflow-hidden bg-white rounded-t-none rounded-b shadow"
     >
       <div class="flex items-center justify-end">
-        <Button class="text-white bg-main-1">Action</Button>
+        <router-link to="/pricing">
+          <Button class="text-white bg-main-1">Start now!</Button>
+        </router-link>
       </div>
     </div>
   </div>
 </template>
 <script setup lang="ts">
 import Button from '../../atoms/Button.vue';
+
+defineProps({
+  author: { type: String, default: '' },
+  title: { type: String, default: '' },
+  description: { type: String, default: '' },
+});
 </script>

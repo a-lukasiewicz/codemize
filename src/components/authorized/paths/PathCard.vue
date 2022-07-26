@@ -19,10 +19,11 @@
         <div class="flex justify-end">
           <router-link to="/frontend-path">
             <Button
-              v-if="pathName !== 'FrontendDeveloper'"
+              v-if="pathName !== 'Frontend Developer'"
               :disabled="disabled"
               class="text-right text-white bg-main-1"
-              >Join path</Button
+              @click="addPathToUser(auth?.currentUser?.uid as string)"
+              >Join Path</Button
             >
             <Button
               v-else
@@ -39,7 +40,8 @@
 
 <script setup lang="ts">
 import Button from '@/components/atoms/Button.vue';
-import { getUserCourseInfo } from '@/functions/user';
+import { getUserCourseInfo } from '@/functions/course';
+import { addPathToUser } from '@/functions/user';
 import { auth } from '@/main';
 import { ref } from 'vue';
 
