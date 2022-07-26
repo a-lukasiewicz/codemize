@@ -37,7 +37,7 @@
             </div>
             <div class="flex items-center justify-center mt-4">
               <router-link to="/login">
-                <Button class="text-black bg-gray-200">Join Us</Button>
+                <Button class="text-black bg-gray-200">Select</Button>
               </router-link>
             </div>
           </div>
