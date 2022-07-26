@@ -1,5 +1,5 @@
 <template>
-  <div class="relative text-center text-white header -z-10">
+  <div class="relative text-center text-white header">
     <Navbar />
     <div class="flex flex-col inner-header">
       <h1

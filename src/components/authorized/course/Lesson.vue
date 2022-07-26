@@ -96,16 +96,16 @@ const path = computed(() => route.path);
 let data = {} as any;
 let id = 0;
 
-if (path.value === '/basics') {
+if (path.value === '/frontend-path/html5/basics') {
   data = basicsData;
   id = 0;
-} else if (path.value === '/tables') {
+} else if (path.value === '/frontend-path/html5/tables') {
   data = tablesData;
   id = 1;
-} else if (path.value === '/forms') {
+} else if (path.value === '/frontend-path/html5/forms') {
   data = formsData;
   id = 2;
-} else if (path.value === '/semantic-elements') {
+} else if (path.value === '/frontend-path/html5/semantic-elements') {
   data = semanticElementsData;
   id = 3;
 }
@@ -122,7 +122,7 @@ const mark = async (number: number) => {
   try {
     markAsCompleted(auth?.currentUser?.uid as string, number);
     createToastFunction('Lesson completed', 'success');
-    router.push('/html5');
+    router.push('/frontend-path/html5');
     disabled.value = true;
   } catch (error) {
     console.error(error);

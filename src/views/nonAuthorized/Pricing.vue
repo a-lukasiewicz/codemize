@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-stretch justify-around min-h-screen">
-    <Navbar />
+    <Navbar blue />
     <Pricing />
     <Footer />
   </div>

@@ -1,7 +1,7 @@
 <template>
   <div
     id="intro"
-    class="fixed top-0 left-0 flex items-center justify-center w-screen h-screen bg-black"
+    class="fixed top-0 left-0 z-10 flex items-center justify-center w-screen h-screen bg-black"
   >
     <div id="intro-text" class="text-3xl text-white">
       <h1 id="hide" class="overflow-hidden bg-black">

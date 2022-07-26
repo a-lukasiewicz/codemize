@@ -1,5 +1,5 @@
 <template>
-  <nav id="header" class="w-full text-main-5">
+  <nav id="header" :class="{ 'bg-main-2': blue }" class="w-full text-main-5">
     <div
       class="container flex flex-wrap items-center w-full py-2 mx-auto mt-0 lg:justify-between"
     >
@@ -55,15 +55,13 @@
       >
         <ul class="items-center justify-end flex-1 list-reset lg:flex">
           <li v-if="isUserLogged" class="mr-3">
-            <router-link
-              to="/home"
-              class="inline-block px-4 py-2 font-bold hover:text-yellowMain"
+            <router-link to="/home" class="inline-block px-4 py-2 font-bold"
               >Your workspace</router-link
             >
           </li>
           <li class="mr-3">
             <router-link
-              class="inline-block px-4 py-2 font-bold no-underline hover:text-yellowMain"
+              class="z-10 inline-block px-4 py-2 font-bold no-underline"
               to="/pricing"
             >
               Pricing
@@ -91,7 +89,6 @@
 </template>
 <script setup lang="ts">
 import { ref } from 'vue';
-// import { gsap } from 'gsap';
 import Logo from '../atoms/Logo.vue';
 
 const showMenu = ref(false);
@@ -99,9 +96,6 @@ const isUserLogged = ref(false);
 
 defineProps({
   loaded: { type: Boolean, default: false },
+  blue: { type: Boolean, default: false },
 });
-
-// onMounted(() => {
-//   gsap.from('#header', { duration: 1, y: '-100%', ease: 'bounce' });
-// });
 </script>

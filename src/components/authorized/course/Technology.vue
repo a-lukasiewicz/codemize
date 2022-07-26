@@ -22,7 +22,7 @@
       <p class="hidden text-xl text-right md:block md:text-left md:mx-8">
         {{ value }} / {{ numberOfLessons }}
       </p>
-      <router-link to="html5">
+      <router-link to="/frontend-path/html5">
         <Button
           :disabled="disabled"
           :class="{ 'opacity-10': disabled }"

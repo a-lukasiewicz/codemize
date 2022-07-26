@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col justify-around space-between">
-    <Navbar />
+    <Navbar blue />
     <Signup class="mt-16" />
     <Footer class="absolute bottom-0 w-screen" />
   </div>

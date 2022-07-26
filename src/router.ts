@@ -28,6 +28,7 @@ export const routes: RouteRecordRaw[] = [
     component: About,
   },
   {
+    name: 'pricing',
     path: '/pricing',
     component: Pricing,
   },
@@ -67,34 +68,6 @@ export const routes: RouteRecordRaw[] = [
     path: '/frontend-path',
     component: Main,
   },
-  {
-    path: '/html5',
-    component: Tech_HTML5,
-  },
-  {
-    path: '/interview-questions',
-    component: InterviewQuestions,
-  },
-  {
-    path: '/basics',
-    component: Lesson,
-  },
-  {
-    path: '/tables',
-    component: Lesson,
-  },
-  {
-    path: '/forms',
-    component: Lesson,
-  },
-  {
-    path: '/semantic-elements',
-    component: Lesson,
-  },
-  {
-    path: '/all-flashcards',
-    component: AllFlashcards,
-  },
 ];
 
 export const router = createRouter({
@@ -103,4 +76,21 @@ export const router = createRouter({
   scrollBehavior() {
     return { top: 0 };
   },
+});
+
+router.addRoute({ path: '/frontend-path/html5', component: Tech_HTML5 });
+router.addRoute({
+  path: '/frontend-path/html5/interview-questions',
+  component: InterviewQuestions,
+});
+router.addRoute({ path: '/frontend-path/html5/basics', component: Lesson });
+router.addRoute({ path: '/frontend-path/html5/tables', component: Lesson });
+router.addRoute({ path: '/frontend-path/html5/forms', component: Lesson });
+router.addRoute({
+  path: '/frontend-path/html5/semantic-elements',
+  component: Lesson,
+});
+router.addRoute({
+  path: '/frontend-path/html5/all-flashcards',
+  component: AllFlashcards,
 });

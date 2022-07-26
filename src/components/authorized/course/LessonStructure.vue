@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/basics">
+  <router-link to="/frontend-path/html5/basics">
     <div class="flex justify-between w-full">
       <div class="flex items-center">
         <h3 class="my-6 text-2xl font-semibold">Basics</h3>
@@ -13,7 +13,7 @@
     </div>
   </router-link>
 
-  <router-link to="/tables">
+  <router-link to="/frontend-path/html5/tables">
     <div class="flex justify-between w-full">
       <div class="flex items-center">
         <h3 class="my-6 text-2xl font-semibold">Tables</h3>
@@ -27,7 +27,7 @@
     </div>
   </router-link>
 
-  <router-link to="/forms">
+  <router-link to="/frontend-path/html5/forms">
     <div class="flex justify-between w-full">
       <div class="flex items-center">
         <h3 class="my-6 text-2xl font-semibold">Forms</h3>
@@ -41,7 +41,7 @@
     </div>
   </router-link>
 
-  <router-link to="/semantic-elements">
+  <router-link to="/frontend-path/html5/semantic-elements">
     <div class="flex justify-between w-full">
       <div class="flex items-center">
         <h3 class="my-6 text-2xl font-semibold">Semantic Elements</h3>
@@ -55,14 +55,14 @@
     </div>
   </router-link>
 
-  <router-link to="/all-flashcards">
+  <router-link to="/frontend-path/html5/all-flashcards">
     <div class="flex justify-between w-full">
       <h3 class="my-6 text-2xl font-semibold">All flashcards</h3>
       <img src="@assets/arrow-right.svg" alt="Arrow" />
     </div>
   </router-link>
 
-  <router-link to="/interview-questions">
+  <router-link to="/frontend-path/html5/interview-questions">
     <div class="flex justify-between w-full">
       <h3 class="my-6 text-2xl font-semibold">Interview questions</h3>
       <img src="@assets/arrow-right.svg" alt="Arrow" />
