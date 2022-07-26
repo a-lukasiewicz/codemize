@@ -1,5 +1,7 @@
 <template>
-  <div>
+  <div id="container">
+    <LoadingText />
+
     <Navbar />
     <Hero />
     <About />
@@ -18,7 +20,6 @@
         </div>
       </template>
     </Suspense>
-    <!-- <Pricing /> -->
     <Footer />
   </div>
 </template>
@@ -26,11 +27,11 @@
 import Navbar from '../../components/basic/Navbar.vue';
 import Hero from '../../components/molecules/Hero/Hero.vue';
 import About from '../../components/molecules/About/About.vue';
-// import Pricing from "../components/Pricing.vue";
 import ActionSection from '../../components/molecules/Ratings/ActionSection.vue';
 import Footer from '../../components/basic/Footer.vue';
 import JoinUs from '../../components/atoms/JoinUs.vue';
 import WhyUs from '../../components/molecules/WhyUs/WhyUs.vue';
 import Companies from '../../components/molecules/Companies/Companies.vue';
 import LoadingSpinner from '@/components/atoms/LoadingSpinner.vue';
+import LoadingText from '@/components/atoms/LoadingText.vue';
 </script>

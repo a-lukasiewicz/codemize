@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-24 pb-12 md:pb-0">
+  <div class="pb-12 md:pb-0">
     <div
       class="container flex flex-col flex-wrap items-center justify-around px-6 mx-auto md:py-20 md:flex-row"
     >

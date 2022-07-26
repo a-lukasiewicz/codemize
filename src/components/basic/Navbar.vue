@@ -1,5 +1,5 @@
 <template>
-  <nav id="header" class="fixed top-0 z-30 w-full text-main-5 bg-main-2">
+  <nav id="header" class="w-full text-main-5 bg-main-2">
     <div
       class="container flex flex-wrap items-center w-full py-2 mx-auto mt-0 lg:justify-between"
     >
@@ -50,7 +50,7 @@
       <div
         id="nav-content"
         :class="{ visible: showMenu }"
-        class="z-20 flex-grow hidden w-full p-4 mt-2 text-xl text-white bg-white lg:flex lg:items-center lg:w-auto lg:mt-0 lg:bg-transparent lg:p-0"
+        class="flex-grow hidden w-full p-4 mt-2 text-xl text-white bg-white lg:flex lg:items-center lg:w-auto lg:mt-0 lg:bg-transparent lg:p-0"
         @click="showMenu = !showMenu"
       >
         <ul class="items-center justify-end flex-1 list-reset lg:flex">
@@ -74,7 +74,7 @@
           v-if="!isUserLogged"
           id="navAction"
           to="/login"
-          class="px-8 py-2 mx-auto font-bold text-white transition duration-300 ease-in-out transform shadow-lg bg-yellowMain p2-4 rounded-xl lg:mx-0 focus:outline-none focus:shadow-outline hover:scale-105"
+          class="inline-block px-4 py-2 font-bold no-underline hover:text-yellowMain"
           >Login</router-link
         >
         <router-link
@@ -91,8 +91,17 @@
 </template>
 <script setup lang="ts">
 import { ref } from 'vue';
+// import { gsap } from 'gsap';
 import Logo from '../atoms/Logo.vue';
 
 const showMenu = ref(false);
 const isUserLogged = ref(false);
+
+defineProps({
+  loaded: { type: Boolean, default: false },
+});
+
+// onMounted(() => {
+//   gsap.from('#header', { duration: 1, y: '-100%', ease: 'bounce' });
+// });
 </script>
