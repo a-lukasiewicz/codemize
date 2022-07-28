@@ -1,6 +1,6 @@
 <template>
-  <div class="relative flex w-full mb-6">
-    <div class="flex flex-col items-center md:px-6">
+  <div class="relative mb-6">
+    <div class="flex items-center md:px-2">
       <div>
         <div class="flex flex-wrap justify-center">
           <div class="flex justify-center w-full">

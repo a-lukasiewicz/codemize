@@ -8,7 +8,7 @@
   <h3
     v-if="subTitle"
     :class="{ 'text-white': whiteColors, 'text-gray-600': !whiteColors }"
-    class="w-full my-2 text-lg italic font-bold leading-tight text-center md:text-xl"
+    class="w-full my-2 text-lg italic leading-tight text-center font-base md:text-xl"
   >
     {{ subTitle }}
   </h3>
