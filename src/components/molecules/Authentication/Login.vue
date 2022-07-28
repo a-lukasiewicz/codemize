@@ -57,24 +57,13 @@
 import Heading from '@/components/atoms/Heading.vue';
 import { ref } from 'vue';
 import Socials from './Socials.vue';
-import { gsap } from 'gsap';
 import { onMounted } from 'vue';
+import { slideDownOpacity } from '@/helpers/animations';
 
 const email = ref('');
 const password = ref('');
 
 onMounted(() => {
-  gsap.to('#login', {
-    duration: 0.5,
-    ease: 'power4.out',
-    y: '-50%',
-    opacity: 0,
-  });
-  gsap.to('#login', {
-    duration: 1.5,
-    ease: 'power4.out',
-    y: 0,
-    opacity: 1,
-  });
+  slideDownOpacity('#login');
 });
 </script>

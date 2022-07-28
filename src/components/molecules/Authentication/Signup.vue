@@ -1,5 +1,5 @@
 <template>
-  <div id="login">
+  <div id="signup">
     <Heading title="Register new account" />
     <div class="flex justify-center mx-4 my-2 md:mx-0">
       <form class="w-full max-w-xl p-6 bg-white rounded-lg shadow-md">
@@ -57,25 +57,14 @@
 import Heading from '@/components/atoms/Heading.vue';
 import { ref } from 'vue';
 import Socials from './Socials.vue';
-import { gsap } from 'gsap';
 import { onMounted } from 'vue';
+import { slideDownOpacity } from '@/helpers/animations';
 
 const email = ref('');
 const password = ref('');
 const fullName = ref('');
 
 onMounted(() => {
-  gsap.to('#login', {
-    duration: 0.5,
-    ease: 'power4.out',
-    y: '-50%',
-    opacity: 0,
-  });
-  gsap.to('#login', {
-    duration: 1.5,
-    ease: 'power4.out',
-    y: 0,
-    opacity: 1,
-  });
+  slideDownOpacity('#signup');
 });
 </script>
