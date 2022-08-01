@@ -1,11 +1,19 @@
 <template>
-  <div v-if="experience" id="whyUs" class="flex flex-col px-5 pt-24 pb-20">
+  <div
+    v-if="experience"
+    id="whyUs"
+    ref="icons"
+    class="flex flex-col px-5 pt-24 pb-20"
+  >
     <Heading
       title="Experience with perfection"
       subTitle="Heart of perdect business management"
       whiteColors
     />
-    <div class="flex justify-around px-4 md:px-24 py-12 mb-4 lg:px-[25vw]">
+    <div
+      id="icons"
+      class="flex justify-around px-4 md:px-24 py-12 mb-4 lg:px-[25vw]"
+    >
       <WhyUsIcon
         iconURL="chart.svg"
         title="Make proggress"
@@ -23,13 +31,21 @@
       />
     </div>
   </div>
-  <div v-else id="whyUs" class="relative flex flex-col px-5 pt-24 pb-20">
+  <div
+    v-else
+    id="whyUs"
+    ref="icons"
+    class="relative flex flex-col px-5 pt-24 pb-20"
+  >
     <Heading
       title="Our stats"
       subTitle="Many successfull carreers starts here"
       whiteColors
     />
-    <div class="flex justify-around px-4 md:px-24 py-12 mb-4 lg:px-[25vw]">
+    <div
+      id="icons"
+      class="flex justify-around px-4 md:px-24 py-12 mb-4 lg:px-[25vw]"
+    >
       <WhyUsIcon
         :number="50"
         title="Make proggress"
@@ -64,9 +80,22 @@
 <script setup lang="ts">
 import WhyUsIcon from './WhyUsIcon.vue';
 import Heading from '../../atoms/Heading.vue';
+import { slideDownOpacity } from '@/helpers/animations';
+import { useIntersectionObserver } from '@vueuse/core';
+import { ref } from 'vue';
 
 defineProps({
   experience: { type: Boolean, default: false },
+});
+
+const icons = ref(null);
+const targetIsVisible = ref(false);
+
+useIntersectionObserver(icons, ([{ isIntersecting }]) => {
+  if (isIntersecting) {
+    slideDownOpacity('#icons', [0.5, 2], '-100%');
+  }
+  targetIsVisible.value = isIntersecting;
 });
 </script>
 <style>
