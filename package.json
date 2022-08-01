@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@egjs/vue3-flicking": "^4.9.0",
+    "@vueuse/core": "^9.0.2",
     "daisyui": "^2.17.0",
     "firebase": "^9.8.4",
     "gsap": "^3.10.4",
