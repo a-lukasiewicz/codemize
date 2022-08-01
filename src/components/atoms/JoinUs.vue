@@ -1,5 +1,5 @@
 <template>
-  <section id="aboutUs" class="py-20 bg-white">
+  <div id="aboutUs" ref="aboutUs" class="py-20 bg-white">
     <div class="text-center text-gray-900">
       <h1 class="w-full my-2 text-3xl font-bold leading-tight">
         Remotely maintain your data, <br />
@@ -15,8 +15,21 @@
         <Button class="mt-4 text-white bg-main-1">Join Us!</Button>
       </router-link>
     </div>
-  </section>
+  </div>
 </template>
 <script setup lang="ts">
+import { slideDownOpacity } from '@/helpers/animations';
+import { useIntersectionObserver } from '@vueuse/core';
+import { ref } from 'vue';
 import Button from './Button.vue';
+
+const aboutUs = ref(null);
+const targetIsVisible = ref(false);
+
+useIntersectionObserver(aboutUs, ([{ isIntersecting }]) => {
+  if (isIntersecting) {
+    slideDownOpacity('#aboutUs', [5.5, 6], '-1000');
+  }
+  targetIsVisible.value = isIntersecting;
+});
 </script>

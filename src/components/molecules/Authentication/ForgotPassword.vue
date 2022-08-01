@@ -43,7 +43,7 @@ const email = ref('');
 const auth = getAuth();
 
 onMounted(() => {
-  slideDownOpacity('#forgotPassword');
+  slideDownOpacity('#forgotPassword', [0.5, 1.5], '-50%');
 });
 
 const forgotPassword = (e: Event) => {

@@ -65,6 +65,6 @@ const password = ref('');
 const fullName = ref('');
 
 onMounted(() => {
-  slideDownOpacity('#signup');
+  slideDownOpacity('#signup', [0.5, 1.5], '-50%');
 });
 </script>

@@ -64,6 +64,6 @@ const email = ref('');
 const password = ref('');
 
 onMounted(() => {
-  slideDownOpacity('#login');
+  slideDownOpacity('#login', [0.5, 1.5], '-50%');
 });
 </script>
