@@ -1,9 +1,11 @@
 <template>
   <div
-    class="flex items-center justify-around w-full py-8 pr-5 mx-8 rounded-md lg:justify-end lg:w-4/5 bg-main-4"
+    id="tech"
+    ref="tech"
+    class="flex items-center justify-around w-full py-8 pr-5 mx-8 rounded-md lg:justify-end lg:w-3/5 bg-main-4"
   >
-    <div class="flex items-center">
-      <h1 class="text-2xl font-bold">{{ techName }}</h1>
+    <div class="flex items-center lg:mr-36">
+      <h1 class="text-2xl font-bold text-center">{{ techName }}</h1>
       <span
         v-if="value === 4"
         class="ml-4 text-sm font-bold bg-green-400 border-0 badge"
@@ -36,6 +38,9 @@
 <script setup lang="ts">
 import Button from '@/components/atoms/Button.vue';
 import { getNumberOfCourseLessons } from '@/functions/course';
+import { slideDownOpacity } from '@/helpers/animations';
+import { useIntersectionObserver } from '@vueuse/core';
+import { ref } from 'vue';
 
 const props = defineProps({
   techName: { type: String, default: '' },
@@ -48,4 +53,14 @@ const props = defineProps({
 let data = await getNumberOfCourseLessons();
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const numberOfLessons = (data as any)[props.choice].numberOfLessons as number;
+
+const tech = ref(null);
+const targetIsVisible = ref(false);
+
+useIntersectionObserver(tech, ([{ isIntersecting }]) => {
+  if (isIntersecting) {
+    slideDownOpacity('#tech', [0.5, 1.5], '-50%');
+  }
+  targetIsVisible.value = isIntersecting;
+});
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="relative mb-6">
+  <div id="profile" ref="profile" class="relative mb-6">
     <div class="flex items-center md:px-2">
       <div>
         <div class="flex flex-wrap justify-center">
@@ -74,7 +74,20 @@
 <script setup lang="ts">
 import Button from '@/components/atoms/Button.vue';
 import { deleteUser, getUserData } from '@/functions/user';
+import { slideDownOpacity } from '@/helpers/animations';
 import { auth } from '@/main';
+import { useIntersectionObserver } from '@vueuse/core';
+import { ref } from 'vue';
 import ProfileBoxCard from './ProfileBoxCard.vue';
 const data = await getUserData(auth.currentUser?.uid as string);
+
+const profile = ref(null);
+const targetIsVisible = ref(false);
+
+useIntersectionObserver(profile, ([{ isIntersecting }]) => {
+  if (isIntersecting) {
+    slideDownOpacity('#profile', [0.5, 1.5], '-100%');
+  }
+  targetIsVisible.value = isIntersecting;
+});
 </script>
