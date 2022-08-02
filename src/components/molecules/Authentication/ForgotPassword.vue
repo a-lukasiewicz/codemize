@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="forgotPassword">
     <Heading title="Forgot password" subTitle="Send email to create a new" />
     <div class="flex justify-center mx-4 my-2 md:mx-0">
       <form class="w-full max-w-xl p-6 bg-white rounded-lg shadow-md">
@@ -36,9 +36,15 @@ import Heading from '@/components/atoms/Heading.vue';
 import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
 import { ref } from 'vue';
 import { createToastFunction } from '@/helpers/createToast';
+import { onMounted } from 'vue';
+import { slideDownOpacity } from '@/helpers/animations';
 
 const email = ref('');
 const auth = getAuth();
+
+onMounted(() => {
+  slideDownOpacity('#forgotPassword', [0.5, 1.5], '-50%');
+});
 
 const forgotPassword = (e: Event) => {
   e.preventDefault();

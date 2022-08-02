@@ -1,5 +1,5 @@
 <template>
-  <nav id="header" :class="{ 'bg-main-2': blue }" class="w-full text-main-5">
+  <nav id="header" :class="{ gradient: blue }" class="w-full text-main-5">
     <div
       class="container flex flex-wrap items-center w-full py-2 mx-auto mt-0 lg:justify-between"
     >
@@ -99,3 +99,12 @@ defineProps({
   blue: { type: Boolean, default: false },
 });
 </script>
+<style>
+.gradient {
+  background: linear-gradient(
+    60deg,
+    rgba(84, 58, 183, 1) 0%,
+    rgba(0, 172, 193, 1) 100%
+  );
+}
+</style>

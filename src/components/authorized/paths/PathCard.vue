@@ -1,5 +1,7 @@
 <template>
   <div
+    id="pathCard"
+    ref="pathCard"
     :class="{ 'opacity-50': disabled }"
     class="relative w-full max-w-md min-w-0 mx-auto mb-6 break-words bg-white shadow-lg xl:max-w-2xl rounded-xl"
   >
@@ -42,7 +44,9 @@
 import Button from '@/components/atoms/Button.vue';
 import { getUserCourseInfo } from '@/functions/course';
 import { addPathToUser } from '@/functions/user';
+import { slideFromSideOpacity } from '@/helpers/animations';
 import { auth } from '@/main';
+import { useIntersectionObserver } from '@vueuse/core';
 import { ref } from 'vue';
 
 defineProps({
@@ -55,4 +59,14 @@ let started = ref(false);
 started.value = await getUserCourseInfo(auth?.currentUser?.uid as string);
 
 const buttonText = started.value ? 'Continue learning' : 'Join path';
+
+const pathCard = ref(null);
+const targetIsVisible = ref(false);
+
+useIntersectionObserver(pathCard, ([{ isIntersecting }]) => {
+  if (isIntersecting) {
+    slideFromSideOpacity('#pathCard', 'right');
+  }
+  targetIsVisible.value = isIntersecting;
+});
 </script>

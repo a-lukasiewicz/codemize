@@ -79,7 +79,6 @@ import Navbar from '@/components/basic/Navbar.vue';
 }
 
 .flex {
-  /*Flexbox for containers*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,8 +100,6 @@ import Navbar from '@/components/basic/Navbar.vue';
   text-align: center;
   background-color: white;
 }
-
-/* Animation */
 
 .parallax > use {
   animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
@@ -131,7 +128,6 @@ import Navbar from '@/components/basic/Navbar.vue';
     transform: translate3d(85px, 0, 0);
   }
 }
-/*Shrinking for mobile*/
 @media (max-width: 768px) {
   .waves {
     height: 40px;

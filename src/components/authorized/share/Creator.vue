@@ -1,5 +1,7 @@
 <template>
   <div
+    id="creator"
+    ref="creator"
     class="flex-shrink w-2/3 max-w-full px-4 sm:w-1/2 md:w-5/12 lg:w-1/4 xl:px-6"
   >
     <div
@@ -92,8 +94,22 @@
   </div>
 </template>
 <script setup lang="ts">
+import { slideDownOpacity } from '@/helpers/animations';
+import { useIntersectionObserver } from '@vueuse/core';
+import { ref } from 'vue';
+
 defineProps({
   name: { type: String, default: '' },
   role: { type: String, default: '' },
+});
+
+const creator = ref(null);
+const targetIsVisible = ref(false);
+
+useIntersectionObserver(creator, ([{ isIntersecting }]) => {
+  if (isIntersecting) {
+    slideDownOpacity('#creator', [0.5, 1.5], '-100%');
+  }
+  targetIsVisible.value = isIntersecting;
 });
 </script>
