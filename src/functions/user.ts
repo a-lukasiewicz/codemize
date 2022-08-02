@@ -50,9 +50,8 @@ export const deleteUser = async (uid: string) => {
     auth?.currentUser?.delete();
     createToastFunction('Account successfully deleted', 'success');
     router.push('/');
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  } catch (error: any) {
-    createToastFunction(error, 'danger');
+  } catch (error: unknown) {
+    createToastFunction(error as string, 'danger');
   }
 };
 
@@ -65,7 +64,7 @@ export const addPathToUser = async (uid: string) => {
         doneOfTech: 0,
       },
     });
-  } catch (error) {
-    console.error(error);
+  } catch (error: unknown) {
+    console.error(error as string);
   }
 };

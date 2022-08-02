@@ -2,9 +2,9 @@
   <div
     id="tech"
     ref="tech"
-    class="flex items-center justify-around w-full py-8 pr-5 mx-8 rounded-md lg:justify-end lg:w-3/5 bg-main-4"
+    class="flex items-center justify-around w-full px-5 py-8 mx-8 rounded-md lg:justify-end lg:w-4/5 bg-main-4"
   >
-    <div class="flex items-center lg:mr-36">
+    <div class="flex items-center">
       <h1 class="text-2xl font-bold text-center">{{ techName }}</h1>
       <span
         v-if="value === 4"
@@ -39,6 +39,7 @@
 import Button from '@/components/atoms/Button.vue';
 import { getNumberOfCourseLessons } from '@/functions/course';
 import { slideDownOpacity } from '@/helpers/animations';
+import { DocumentData } from '@firebase/firestore';
 import { useIntersectionObserver } from '@vueuse/core';
 import { ref } from 'vue';
 
@@ -50,9 +51,8 @@ const props = defineProps({
   value: { type: Number, default: 0 },
 });
 
-let data = await getNumberOfCourseLessons();
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const numberOfLessons = (data as any)[props.choice].numberOfLessons as number;
+let data = (await getNumberOfCourseLessons()) as DocumentData;
+const numberOfLessons = data[props.choice].numberOfLessons as number;
 
 const tech = ref(null);
 const targetIsVisible = ref(false);

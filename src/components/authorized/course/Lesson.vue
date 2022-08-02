@@ -3,7 +3,10 @@
     <div v-for="el in data.introduction" :key="el">
       <Text class="py-2" :text="el" />
     </div>
-    <Table v-if="path === '/tables'" :data="data.mostImportantTags" />
+    <Table
+      v-if="path === '/tables'"
+      :data="(data?.mostImportantTags as MostImportantTagsEntity[])"
+    />
     <Form v-if="path === '/forms'" />
     <img
       v-if="path === '/semantic-elements'"
@@ -12,24 +15,26 @@
     />
     <h3 class="mt-6 mb-6 text-xl font-semibold">Practical knowledge</h3>
     <div class="text-sm md:text-base mockup-code">
-      <pre data-prefix="$"><code>{{data.practicalKnowledge[0]}}</code></pre>
+      <pre
+        data-prefix="$"
+      ><code>{{(data?.practicalKnowledge?.[0])}}</code></pre>
     </div>
-    <Video class="pt-2" :src="data.practicalKnowledge[1]" />
+    <Video class="pt-2" :src="data?.practicalKnowledge?.[1]" />
     <h3 class="mt-6 mb-6 text-xl font-semibold">Most Important Tags</h3>
-    <Table :data="data.mostImportantTags" />
+    <Table :data="(data?.mostImportantTags as MostImportantTagsEntity[])" />
     <h3 class="mt-6 mb-6 text-xl font-semibold">Advices</h3>
     <ul v-for="el in data.advices" :key="el" class="list-disc list-inside">
       <li class="py-2">{{ el }}</li>
     </ul>
     <h3 class="mt-6 mb-6 text-xl font-semibold">Practise</h3>
-    <Text :text="data.recap[0]" />
+    <Text :text="data?.recap?.[0]" />
     <ul>
       <li>
-        <a class="hidden md:block hover:text-main-1" :href="data.recap[1]">{{
-          data.recap[1]
+        <a class="hidden md:block hover:text-main-1" :href="data?.recap?.[1]">{{
+          data?.recap?.[1]
         }}</a>
-        <a class="md:hidden hover:text-main-1" :href="data.recap[1]">{{
-          data.recap[1].length > 30 ? 'LINK' : data.recap[1]
+        <a class="md:hidden hover:text-main-1" :href="data?.recap?.[1]">{{
+          (data?.recap?.[1].length ?? 0) > 30 ? 'LINK' : data?.recap?.[1]
         }}</a>
       </li>
     </ul>
@@ -91,25 +96,25 @@ import { createToastFunction } from '@/helpers/createToast';
 import { router } from '@/router';
 import { getUserData } from '@/functions/user';
 import { slideDownOpacity } from '@/helpers/animations';
+import { Lesson, MostImportantTagsEntity } from '@/types';
 
 const route = useRoute();
 const path = computed(() => route.path);
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-let data = {} as any;
+let data = [] as Lesson;
 let id = 0;
 
 if (path.value === '/frontend-path/html5/basics') {
-  data = basicsData;
+  data = basicsData as Lesson;
   id = 0;
 } else if (path.value === '/frontend-path/html5/tables') {
-  data = tablesData;
+  data = tablesData as Lesson;
   id = 1;
 } else if (path.value === '/frontend-path/html5/forms') {
-  data = formsData;
+  data = formsData as Lesson;
   id = 2;
 } else if (path.value === '/frontend-path/html5/semantic-elements') {
-  data = semanticElementsData;
+  data = semanticElementsData as Lesson;
   id = 3;
 }
 let disabled = ref(false);

@@ -156,8 +156,6 @@ router.addRoute({
 function authUser(): Promise<boolean> {
   return new Promise((resolve) => {
     auth.onAuthStateChanged((user) => {
-      console.log(user);
-
       if (!user) {
         resolve(false);
       } else {
