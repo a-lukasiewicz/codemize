@@ -1,8 +1,6 @@
 <template>
   <div class="flex flex-col flex-grow flex-shrink w-full p-6 md:w-1/3">
-    <div
-      class="flex-1 py-3 overflow-hidden bg-white rounded-t rounded-b-none shadow"
-    >
+    <div class="flex-1 py-3 overflow-hidden bg-white rounded-t rounded-b-none shadow">
       <div class="flex items-center py-2 avatar">
         <div class="w-12 ml-3 rounded-full">
           <img src="https://placeimg.com/192/192/people" />
@@ -18,19 +16,11 @@
         </p>
       </a>
     </div>
-    <div
-      class="flex-none p-6 mt-auto overflow-hidden bg-white rounded-t-none rounded-b shadow"
-    >
-      <div class="flex items-center justify-end">
-        <router-link to="/pricing">
-          <Button class="text-white bg-main-1">Start now!</Button>
-        </router-link>
-      </div>
+    <div class="flex-none p-6 mt-auto overflow-hidden bg-white rounded-t-none rounded-b shadow">
     </div>
   </div>
 </template>
 <script setup lang="ts">
-import Button from '../../atoms/Button.vue';
 
 defineProps({
   author: { type: String, default: '' },

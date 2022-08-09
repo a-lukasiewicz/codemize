@@ -9,7 +9,8 @@
     <AboutUsText
       topBadge="EASY AND ACCESSABLE"
       linkTitle="Remote Access"
-      defaultText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum eos mollitia cumque, aliquam earum ex illo facere blanditiis reprehenderit ad? Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, veritatis sequi excepturi deserunt minus eveniet sed."
+      defaultText="Codemize gives you oppurtunity to use it whenever you want. Could be during break, while riding a bus and many more options...
+      You are deciding!"
     />
   </div>
   <div
@@ -20,7 +21,7 @@
     <AboutUsText
       topBadge="WEB PLATFORM"
       linkTitle="Control Progress"
-      defaultText="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum eos mollitia cumque, aliquam earum ex illo facere blanditiis reprehenderit ad? Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, veritatis sequi excepturi deserunt minus eveniet sed."
+      defaultText="Learn most important concepts to be job ready in simple stept. Every lesson contains practical knowledge. It's a perfect option, easy and not overwhelming learning paths."
     />
     <img :src="imageURL" alt="" />
   </div>
