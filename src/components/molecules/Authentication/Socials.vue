@@ -61,13 +61,19 @@ import { useRouter } from 'vue-router';
 import Button from '@/components/atoms/Button.vue';
 import { createToastFunction } from '@/helpers/createToast';
 import { createUser, isUserExsist } from '@/functions/user';
+import {
+  FacebookAuthProvider_Instance,
+  GithubAuthProvider_Instance,
+  GoogleAuthProvider_Instance,
+} from '@firebase/auth-types';
 
 const router = useRouter();
 const auth = getAuth();
 
-const providerGoogle = new GoogleAuthProvider();
-const providerFacebook = new FacebookAuthProvider();
-const providerGithub = new GithubAuthProvider();
+const providerGoogle = new GoogleAuthProvider() as GoogleAuthProvider_Instance;
+const providerFacebook =
+  new FacebookAuthProvider() as FacebookAuthProvider_Instance;
+const providerGithub = new GithubAuthProvider() as GithubAuthProvider_Instance;
 
 providerGoogle.addScope('email');
 
@@ -177,9 +183,9 @@ const GithubLogin = () => {
       if (found === '') {
         createUser(
           auth?.currentUser?.uid as string,
-          result.user.reloadUserInfo.providerUserInfo[0].email,
-          result.user.photoURL,
-          result.user.displayName
+          result?.user?.reloadUserInfo?.providerUserInfo[0]?.email as string,
+          result.user.photoURL as string,
+          result.user.displayName as string
         );
         createToastFunction(
           'Account successfully created',

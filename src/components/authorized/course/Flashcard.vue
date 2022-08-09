@@ -1,9 +1,6 @@
 <template>
   <div class="my-4">
-    <div
-      class="px-4 py-8 text-white card bg-main-2"
-      @click="flipped = !flipped"
-    >
+    <div class="px-4 py-8 font-bold text-gray-900 bg-main-2 card" @click="flipped = !flipped">
       <transition name="flip">
         <div v-show="!flipped">
           <h2 class="text-sm">

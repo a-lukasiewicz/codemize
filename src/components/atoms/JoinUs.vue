@@ -6,10 +6,8 @@
         from anywhere, anytime
       </h1>
       <p class="pt-4 md:px-24 lg:px-40">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
-        aliquid. Nisi id deserunt tempore in nulla,
-        <span class="ml-4 md:ml-0"></span> sed blanditiis hic, fugiat odio minus
-        non nobis, molestias voluptatibus.
+        Learn most important concepts to be job ready in simple stept. Every lesson contains practical knowledge. It's a
+        perfect option, easy and not overwhelming learning paths.
       </p>
       <router-link to="/pricing">
         <Button class="mt-4 text-white bg-main-1">Join Us!</Button>

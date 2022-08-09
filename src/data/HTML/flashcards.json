@@ -1,41 +1,41 @@
 [
     {
-        "category": "/basics",
+        "category": "/frontend-path/html5/basics",
         "frontText":"<p> tag",
         "backText":"The <p> tag defines a paragraph."
     },
     {
-        "category": "/basics",
+        "category": "/frontend-path/html5/basics",
         "frontText":"How many heading are in HTML?",
         "backText":"HTML headings are defined with the <h1> to <h6> tags. So, it's 6."
     },
     {
-        "category": "/tables",
+        "category": "/frontend-path/html5/tables",
         "frontText":"What is <tr>",
         "backText":"Table Row"
     },
     {
-        "category": "/tables",
+        "category": "/frontend-path/html5/tables",
         "frontText":"Who invented all the parts that are now used for a modern computer?",
         "backText":"A man by the name of Charles Babbage in 1833."
     },
     {
-        "category": "/forms",
+        "category": "/frontend-path/html5/forms",
         "frontText":"What is form?",
         "backText":"An HTML form is used to collect user input. The user input is most often sent to a server for processing."
     },
     {
-        "category": "/forms",
+        "category": "/frontend-path/html5/forms",
         "frontText":"What are Text Input Controls",
         "backText":"Single-line text input controls − using HTML <input> tag. Password input controls −  also created using HTMl <input> tag. Multi-line text input controls − using HTML <textarea> tag."
     },
     {
-        "category": "/semantic-elements",
+        "category": "/frontend-path/html5/semantic-elements",
        "frontText":"What are Semantic Elements?",
        "backText":"A semantic element clearly describes its meaning to both the browser and the developer.Examples of non-semantic elements: <div> and <span> - Tells nothing about its content. Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content."
     },
     {
-        "category": "/semantic-elements",
+        "category": "/frontend-path/html5/semantic-elements",
        "frontText":"Explain what <section> is?",
        "backText":"A section is a thematic grouping of content, typically with a heading. Could be used as Chapteds, News items etc."
     }
