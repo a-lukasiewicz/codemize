@@ -1,5 +1,5 @@
 <template>
-  <div v-if="started.value" class="w-full px-4 py-8 text-black rounded md:px-16">
+  <div v-if="started" class="w-full px-4 py-8 text-black rounded md:px-16">
     <h1 class="-ml-4 text-3xl font-bold">Frontend Developer Path</h1>
     <p class="-mb-4 font-bold tracking-wider text-main-1">Keep going</p>
     <div class="flex items-center justify-around pt-8">
@@ -212,8 +212,8 @@ import { getUserCourseInfo } from '@/functions/course';
 import { auth } from '@/main';
 import { getUserData } from '@/functions/user';
 
-let started = ref(false);
-started.value = await getUserCourseInfo(auth?.currentUser?.uid as string);
+let started = ref(false)
+// let started = ref(await getUserCourseInfo(auth?.currentUser?.uid as string))
 
 const data = await getUserData(auth?.currentUser?.uid as string);
 </script>
