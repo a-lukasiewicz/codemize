@@ -1,5 +1,5 @@
 <template>
-  <div v-if="started" class="w-full px-4 py-8 text-black rounded md:px-16">
+  <div v-if="started.value" class="w-full px-4 py-8 text-black rounded md:px-16">
     <h1 class="-ml-4 text-3xl font-bold">Frontend Developer Path</h1>
     <p class="-mb-4 font-bold tracking-wider text-main-1">Keep going</p>
     <div class="flex items-center justify-around pt-8">
@@ -77,9 +77,9 @@
           "
         ></div>
         <div class="w-3/5 pl-3">
-          <p class="text-xs font-semibold text-gray-500 uppercase">SPORTS</p>
+          <p class="text-xs font-semibold text-gray-500 uppercase">FRONTEND DEVELOPMENT</p>
           <h3 class="mb-3 font-semibold leading-tight text-md">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit
+            React vs Angular vs Vue vs Svelte - which should you learn?
           </h3>
           <div
             class="flex items-center w-full text-xs font-medium text-gray-500"
@@ -112,9 +112,9 @@
           "
         ></div>
         <div class="w-3/5 pl-3">
-          <p class="text-xs font-semibold text-gray-500 uppercase">ART</p>
+          <p class="text-xs font-semibold text-gray-500 uppercase">PERSONAL DEVELOPMENT</p>
           <h3 class="mb-3 font-semibold leading-tight text-md">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit
+            How to learn to be great developer?
           </h3>
           <div
             class="flex items-center w-full text-xs font-medium text-gray-500"
@@ -147,9 +147,9 @@
           "
         ></div>
         <div class="w-3/5 pl-3">
-          <p class="text-xs font-semibold text-gray-500 uppercase">MUSIC</p>
+          <p class="text-xs font-semibold text-gray-500 uppercase">JAVA</p>
           <h3 class="mb-3 font-semibold leading-tight text-md">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit
+            Java - Data structures
           </h3>
           <div
             class="flex items-center w-full text-xs font-medium text-gray-500"
@@ -182,9 +182,9 @@
           "
         ></div>
         <div class="w-3/5 pl-3">
-          <p class="text-xs font-semibold text-gray-500 uppercase">WORLD</p>
+          <p class="text-xs font-semibold text-gray-500 uppercase">FRONTEND DEVELOPMENT</p>
           <h3 class="mb-3 font-semibold leading-tight text-md">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit
+            React - Top 10 best practises to use
           </h3>
           <div
             class="flex items-center w-full text-xs font-medium text-gray-500"
