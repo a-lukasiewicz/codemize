@@ -1,8 +1,8 @@
 <template>
-  <div class="flex flex-col justify-around space-between">
+  <div class="flex flex-col justify-around">
     <Navbar blue />
     <Login class="mt-16" />
-    <Footer class="absolute bottom-0 w-screen" />
+    <Footer class="w-full mt-16 lg:absolute lg:bottom-0 " />
   </div>
 </template>
 <script setup lang="ts">

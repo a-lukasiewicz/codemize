@@ -77,9 +77,9 @@
           "
         ></div>
         <div class="w-3/5 pl-3">
-          <p class="text-xs font-semibold text-gray-500 uppercase">SPORTS</p>
+          <p class="text-xs font-semibold text-gray-500 uppercase">FRONTEND DEVELOPMENT</p>
           <h3 class="mb-3 font-semibold leading-tight text-md">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit
+            React vs Angular vs Vue vs Svelte - which should you learn?
           </h3>
           <div
             class="flex items-center w-full text-xs font-medium text-gray-500"
@@ -112,9 +112,9 @@
           "
         ></div>
         <div class="w-3/5 pl-3">
-          <p class="text-xs font-semibold text-gray-500 uppercase">ART</p>
+          <p class="text-xs font-semibold text-gray-500 uppercase">PERSONAL DEVELOPMENT</p>
           <h3 class="mb-3 font-semibold leading-tight text-md">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit
+            How to learn to be great developer?
           </h3>
           <div
             class="flex items-center w-full text-xs font-medium text-gray-500"
@@ -147,9 +147,9 @@
           "
         ></div>
         <div class="w-3/5 pl-3">
-          <p class="text-xs font-semibold text-gray-500 uppercase">MUSIC</p>
+          <p class="text-xs font-semibold text-gray-500 uppercase">JAVA</p>
           <h3 class="mb-3 font-semibold leading-tight text-md">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit
+            Java - Data structures
           </h3>
           <div
             class="flex items-center w-full text-xs font-medium text-gray-500"
@@ -182,9 +182,9 @@
           "
         ></div>
         <div class="w-3/5 pl-3">
-          <p class="text-xs font-semibold text-gray-500 uppercase">WORLD</p>
+          <p class="text-xs font-semibold text-gray-500 uppercase">FRONTEND DEVELOPMENT</p>
           <h3 class="mb-3 font-semibold leading-tight text-md">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit
+            React - Top 10 best practises to use
           </h3>
           <div
             class="flex items-center w-full text-xs font-medium text-gray-500"
@@ -212,8 +212,8 @@ import { getUserCourseInfo } from '@/functions/course';
 import { auth } from '@/main';
 import { getUserData } from '@/functions/user';
 
-let started = ref(false);
-started.value = await getUserCourseInfo(auth?.currentUser?.uid as string);
+let started = ref(false)
+// let started = ref(await getUserCourseInfo(auth?.currentUser?.uid as string))
 
 const data = await getUserData(auth?.currentUser?.uid as string);
 </script>

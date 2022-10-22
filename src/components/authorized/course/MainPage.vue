@@ -40,27 +40,27 @@
     <Technology
       :value="0"
       disabled
-      buttonText="Start now"
+      :buttonText="buttonText"
       choice="CSS"
       techName="CSS3"
     />
     <Technology
       :value="0"
       disabled
-      buttonText="Start now"
+      :buttonText="buttonText"
       choice="JS"
       techName="JavaScript"
     />
     <Technology
       :value="0"
-      buttonText="Start now"
+      :buttonText="buttonText"
       disabled
       choice="REACT"
       techName="React"
     />
     <Technology
       :value="0"
-      buttonText="Start now"
+      :buttonText="buttonText"
       disabled
       choice="TS"
       techName="Typescript"
@@ -73,12 +73,11 @@ import { getUserData } from '@/functions/user';
 import { auth } from '@/main';
 import { ref } from 'vue';
 
+let buttonText = ref('Start now');
 let user = await getUserData(auth?.currentUser?.uid as string);
-
-let buttonText = ref('');
-if (user?.currentPath.doneOfTech === 0) {
-  buttonText.value = 'Start now';
-} else if (user?.currentPath.doneOfTech === 4) {
+if(typeof user?.currentPath.doneOfTech === 'number' && user?.currentPath.doneOfTech!==0){
+  buttonText.value = 'Continue learning';
+}else if (typeof user?.currentPath.doneOfTech === 'number' && user?.currentPath.doneOfTech===4) {
   buttonText.value = 'Finished!';
 }
 </script>
