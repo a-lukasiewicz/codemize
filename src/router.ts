@@ -8,6 +8,7 @@ import LoginPage from './views/nonAuthorized/LoginPage.vue';
 import ForgotPasswordPage from './views/nonAuthorized/ForgotPasswordPage.vue';
 import Signup from './views/nonAuthorized/Signup.vue';
 import AuthHome from './views/Authorized/AuthHome.vue';
+import AddNewCourse from './views/Authorized/AddNewCourse.vue'
 import Paths from './views/Authorized/Paths.vue';
 import NewCourses from './views/Authorized/NewCourses.vue';
 import Share from './views/Authorized/Share.vue';
@@ -48,6 +49,13 @@ export const routes: RouteRecordRaw[] = [
   {
     path: '/home',
     component: AuthHome,
+    meta: {
+      authRequired: true,
+    },
+  },
+  {
+    path: '/add-course',
+    component: AddNewCourse,
     meta: {
       authRequired: true,
     },

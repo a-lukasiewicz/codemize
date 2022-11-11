@@ -22,11 +22,6 @@
           iconURL="chart-histogram.svg"
           linkTitle="Your paths"
         />
-        <!-- <SidebarLink
-          route="/new-courses"
-          iconURL="alarm-clock.svg"
-          linkTitle="New courses"
-        /> -->
         <SidebarLink
           route="/our-team"
           iconURL="share.svg"
@@ -36,6 +31,11 @@
           route="/profile"
           iconURL="settings-sliders.svg"
           linkTitle="Your profile"
+        />
+        <SidebarLink
+          route="/add-course"
+          iconURL="alarm-clock.svg"
+          linkTitle="Add course"
         />
         <SidebarLink
           route="/"
